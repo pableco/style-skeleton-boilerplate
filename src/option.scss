@@ -1,0 +1,12 @@
+@import  '~roi-styles-common/src/basic_variables';
+// add dependency of 3rd party css here
+@import 'main';
+
+%list-item__img {
+    width: 300px;
+    height: 300px;
+    border: 1px solid red;
+}
+%list-item__title{
+    text-transform: lowercase;
+}

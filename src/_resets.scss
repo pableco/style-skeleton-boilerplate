@@ -1,0 +1,25 @@
+html,
+body,
+ul,
+ol {
+    margin: 0;
+    padding: 0;
+}
+
+html,
+body {
+    width: 100%;
+    height: 99%;
+}
+
+body {
+    font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+}
+
+.menu{
+    text-align: center;
+    li{
+        padding: 1rem;
+        display: inline-block;
+    }
+}
