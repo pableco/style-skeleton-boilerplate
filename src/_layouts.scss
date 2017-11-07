@@ -1,0 +1,80 @@
+@import "skeleton";
+
+@mixin list__template(){
+    %list{
+        &-item{
+            &__img{
+                &-fix {}
+            }
+            &__title{}
+            &__text{}
+            &__description{}
+            &__content{}
+            &__button{}
+        }
+    }
+}
+
+@mixin list__default(
+    $img--width: 20rem,
+    $img--height: 10rem,
+    $over_background: #f8f8f8,
+    $show_background: rgba(0, 0, 0, .7)){
+
+    %list {
+        list-style: none;
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: center;
+        &-item {
+            position: relative;
+            display: block;
+            &:hover{
+                background: $over_background;
+                & .list-item__content{
+                display: block;
+                }
+            }
+            &__img {
+                display: none;
+                &-fix {
+                    width: $img--width;
+                    height: $img--height;
+                    background-position: 50% 50%;
+                    background-size: cover;
+                    background-position: center;
+                    background-repeat: no-repeat;
+                }
+            }
+            &__title{
+                text-transform: uppercase;
+            }
+            &__content{
+                position: absolute;
+                top: 0;
+                left: 0;
+                width: 100%;
+                height: 100%;
+                display: none;
+                background-color: $show_background;
+            }
+            &__description{
+                font-size: .85rem;
+                text-align: center;
+                line-height: 4;
+                height: 50%;
+                letter-spacing: .1rem;
+                color: #fff;
+                border-bottom: solid .01rem #fff;
+            }
+            &__action{
+                width: 100%;
+                height: 2rem;
+            }
+        }
+        @content;
+    }
+}
+
+

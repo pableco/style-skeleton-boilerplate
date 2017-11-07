@@ -1,0 +1,30 @@
+@import "resets";
+
+.list {
+    @extend %list !optional;
+    
+    &-item{
+        @extend %list-item !optional;
+
+        &__title{
+            @extend %list-item__title !optional;
+        }
+
+        &__content{
+            @extend %list-item__content !optional;
+        }
+
+        &__description{
+            @extend %list-item__description !optional;
+        }
+
+        &__img{
+            @extend %list-item__img !optional;
+        }
+
+        &__img-fix{
+            @extend %list-item__img-fix !optional;
+        }
+    }
+    @content;
+}
