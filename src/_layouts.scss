@@ -1,4 +1,5 @@
-@import "skeleton";
+@import 'skeleton';
+@import 'variables';
 
 @mixin list__template(){
     %list{
@@ -15,11 +16,31 @@
     }
 }
 
-@mixin list__default(
+@mixin list__default(){
+    %list{     
+        &-item{
+            padding: 2rem 0;
+            border: 1px solid #ff0000;
+            &__img{
+                &-fix {}
+            }
+            &__title{}
+            &__text{}
+            &__description{}
+            &__content{}
+            &__button{}
+        }
+        @content;
+    }
+}
+
+
+@mixin list__option(
     $img--width: 20rem,
     $img--height: 10rem,
     $over_background: #f8f8f8,
-    $show_background: rgba(0, 0, 0, .7)){
+    $show_background: rgba(0, 0, 0, .7),
+    $action: #3c82fc){
 
     %list {
         list-style: none;
@@ -31,9 +52,9 @@
             position: relative;
             display: block;
             &:hover{
-                background: $over_background;
+                background-color: $over_background;
                 & .list-item__content{
-                display: block;
+                    display: flex;
                 }
             }
             &__img {
@@ -58,6 +79,7 @@
                 height: 100%;
                 display: none;
                 background-color: $show_background;
+                flex-direction: column;
             }
             &__description{
                 font-size: .85rem;
@@ -67,10 +89,19 @@
                 letter-spacing: .1rem;
                 color: #fff;
                 border-bottom: solid .01rem #fff;
+                
             }
             &__action{
-                width: 100%;
+                flex-grow: 3;
+                text-transform: uppercase;
+                align-self: center;
+                width: 90%;
+                margin: 5%;
                 height: 2rem;
+                color: #fff;
+                font-size: 1.2rem;
+                background: $action;
+                border: 2px solid darken($action, 30%);
             }
         }
         @content;
@@ -78,3 +109,57 @@
 }
 
 
+@mixin list__alternate(
+    $img--width: 100%,
+    $img--height: 7rem,
+    $button-text: #f2f2f2,
+    $button-color: rgb(49, 135, 129)){
+    %list {
+        list-style: none;
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        text-align: center;
+        justify-content: space-around;
+        &-item{
+            align-self: center;
+
+            &__title{
+                align-self: center;
+            }
+            &__sub-title{
+                font-size: .7rem;
+                position: relative;
+                top: 4.5rem;
+                color: $button-text;
+            }
+            &__img {
+                display: none;
+                &-fix {
+                    width: $img--width;
+                    height: $img--height;
+                    background-position: 50% 50%;
+                    background-size: cover;
+                    background-position: center;
+                    background-repeat: no-repeat;
+                    border-radius: 50%;
+                    border: 0;
+                }
+            }
+            &__description{
+                align-self: center;
+            }
+            &__action{
+                align-self: center;
+                text-transform: lowercase;
+                font-size: 1.2rem;
+                width: 100%;
+                height: 3rem;
+                border: none;
+                background: $button-color;
+                color: $button-text;
+            }
+        }
+        @content;
+    }
+}
