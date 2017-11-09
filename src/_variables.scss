@@ -1,0 +1,70 @@
+// BRAND ----------------------------------------------------------
+
+$brand: corporativa !default;
+
+// media queries -----------------------------------------------------------
+
+// Extra small screen / phone
+$screen_xs: 340px !default;
+// Small screen / phone
+$screen_sm: 568px !default;
+// Medium screen / tablet
+$screen_md: 769px !default;
+// Large screen / desktop
+$screen_lg: 1024px !default;
+// Extra large screen / wide desktop
+$screen_xl: 1200px !default;
+
+$max-width: 1600px !default;
+$min-width: 150px !default;
+$padding-base: 30px !default;
+
+$tablet: lg !default;
+$tabletv: md !default;
+
+// colors --------------------------------------------------------- 
+
+$base_01: #555555 !default;
+$base_02: #999999 !default;
+$base_03: #F9F9F9 !default;
+$second_01: #8F644B !default;
+
+//form states
+
+$form_ok: #B2B717 !default;
+$form_error: #FFB20C !default;
+$form_required: #AD1F00 !default;
+
+
+// fonts --------------------------------------------------------- 
+
+
+$icons_base: icons_base !default;
+$font1: Helvetica !default;
+$font2: Helvetica !default;
+$font3: Helvetica !default;
+$font4: Helvetica !default; 
+$font5: Helvetica !default; 
+$font6: Helvetica !default;  
+$icons: icons !default;
+
+$font-face: $font1,$font2,$font3,$font4,$font5,$font6,$icons,$icons_base;
+
+$fontsetbase: $font1, sans-serif !default;
+$fontset01: $font1, Arial, sans-serif !default;
+$fontset02: $font2, Arial, sans-serif !default;
+$fontset03: $font3, Arial, sans-serif !default;
+$fontset04: $font4, Arial, sans-serif !default; 
+$fontset05: $font5, Arial, sans-serif !default; 
+$fontset06: $font6, Arial, sans-serif !default; 
+$fontsize_base:62.5%;
+
+
+// items menu --------------------------------------------------------- 
+
+$visible_items:9 !default;
+
+
+//Popup footer
+$size-popup-title-left: 3.8rem;
+$size-popup-fringe-title: 3.2rem;
