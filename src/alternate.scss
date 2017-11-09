@@ -1,26 +1,11 @@
-@import  '~roi-styles-common/src/basic_variables';
+@import  'variables';
 // add dependency of 3rd party css here
 @import 'main';
 
-%list-item__img {
-    width: 300px;
-    height: 150px;
-}
-
-%list-item__button{
-    align-self: center;
-    width: 400px;
-    height: 50px;
-}
-
-.list{
-    &-item{
-        align-self: center;
-        &__title{
-            align-self: center;
-        }
-        &__description{
-            align-self: center;
+@include list__alternate(){
+    %list-item__title{
+        &::after, &::before{
+            content: '-';
         }
     }
-}
+};

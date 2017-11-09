@@ -9,7 +9,9 @@
         &__title{
             @extend %list-item__title !optional;
         }
-
+        &__sub-title{
+            @extend %list-item__sub-title !optional;
+        }
         &__content{
             @extend %list-item__content !optional;
         }
@@ -24,6 +26,10 @@
 
         &__img-fix{
             @extend %list-item__img-fix !optional;
+        }
+
+        &__action{
+            @extend %list-item__action !optional;
         }
     }
     @content;
