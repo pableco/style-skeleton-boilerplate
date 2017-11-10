@@ -1,9 +1,9 @@
-@import 'skeleton';
-@import 'variables';
 
-@mixin list__template(){
-    %list{
+@mixin list__default(){
+    %list{     
         &-item{
+            padding: 2rem 0;
+            border: 1px solid #ff0000;
             &__img{
                 &-fix {}
             }
@@ -13,9 +13,6 @@
             &__content{}
             &__button{}
         }
+        @content;
     }
 }
-
-@import 'list--alternate';
-@import 'list--option';
-@import 'list--default';

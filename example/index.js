@@ -6,6 +6,11 @@ import Test from '../src/index-with-styles';
 // Example of use of the component in an application
 
 ReactDOM.render(
-    <Test classname={'__default'}/>,
-    document.getElementById('content')
+    <Test classname={'--offers'}/>,
+    document.getElementById('offers')
+);
+
+ReactDOM.render(
+    <Test classname={'--news'}/>,
+    document.getElementById('news')
 );

@@ -8,4 +8,14 @@
             content: '-';
         }
     }
+    &.list--offers{
+        %list-item__title{
+           color: #ff0000;
+        }
+    }
+    &.list--news{
+        %list-item__title{
+           text-transform: uppercase;
+        }
+    }
 };

@@ -31,6 +31,9 @@
         &__action{
             @extend %list-item__action !optional;
         }
+        &__label{
+            @extend %list-item__label !optional;
+        }
     }
     @content;
 }

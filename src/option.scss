@@ -4,11 +4,11 @@
 
 
 @include list__option(){
-    // %list-item__title{
-    //     &::after, &::before{
-    //         content: '-';
-    //     }
-    //     text-transform: lowercase;
-    //     text-align: center;
-    // }
+    %list-item__title{
+        &::after, &::before{
+            content: '-';
+        }
+        text-transform: lowercase;
+        text-align: center;
+    }
 };
