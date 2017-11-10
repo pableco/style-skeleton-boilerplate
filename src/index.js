@@ -12,11 +12,6 @@ export default class Test extends Component {
         const classNameList = `list list${this.props.classname}`;
         return (
         <div className={className}>
-            <ul className="menu">
-                <li><a href="/index.html">default</a></li>
-                <li><a href="/alternate.html">alternate</a></li>
-                <li><a href="/option.html">option</a></li>
-            </ul>
             <ul className={classNameList}>
                 <ExampleList/>
                 <ExampleList/>
