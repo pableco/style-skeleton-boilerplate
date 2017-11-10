@@ -1,21 +1,21 @@
 @import 'skeleton';
 @import 'variables';
 
-@mixin list__template(){
-    %list{
-        &-item{
-            &__img{
-                &-fix {}
-            }
-            &__title{}
-            &__text{}
-            &__description{}
-            &__content{}
-            &__button{}
-        }
-    }
-}
+// @mixin list__template(){
+//     %list{
+//         &-item{
+//             &__img{
+//                 &-fix {}
+//             }
+//             &__title{}
+//             &__text{}
+//             &__description{}
+//             &__content{}
+//             &__button{}
+//         }
+//     }
+// }
 
-@import 'list--alternate';
-@import 'list--option';
-@import 'list--default';
+@import 'themes/_list--default.scss';
+@import 'themes/_list--option.scss';
+@import 'themes/_list--alternate.scss';

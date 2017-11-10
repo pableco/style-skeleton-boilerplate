@@ -14,8 +14,12 @@
         }
     }
     &.list--news{
-        %list-item__title{
-           text-transform: uppercase;
+        %list-item{
+            background: #ccc;
+            &__title{
+                text-transform: uppercase;
+                color: blue;
+            }
         }
     }
 };
