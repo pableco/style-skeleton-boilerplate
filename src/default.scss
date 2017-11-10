@@ -1,9 +1,8 @@
-@import  '~roi-styles-common/src/basic_variables';
 // add dependency of 3rd party css here
 @import 'main';
 
 @include list__default(){
-    // %list-item__title{
-    //     color: #ccc;
-    // }
+    %list-item__title{
+        color: #ccc;
+    }
 };

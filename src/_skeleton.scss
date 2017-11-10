@@ -34,6 +34,9 @@
         &__label{
             @extend %list-item__label !optional;
         }
+        &__span-des{
+            @extend %list-item__span-des !optional;
+        }
     }
     @content;
 }
