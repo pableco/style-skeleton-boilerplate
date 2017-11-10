@@ -1,0 +1,18 @@
+
+@mixin list__default($border: $base_01){
+    %list{     
+        &-item{
+            padding: 2rem 0;
+            border: 1px solid $border;
+            &__img{
+                &-fix {}
+            }
+            &__title{}
+            &__text{}
+            &__description{}
+            &__content{}
+            &__button{}
+        }
+        @content;
+    }
+}
