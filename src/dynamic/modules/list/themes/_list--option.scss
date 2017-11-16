@@ -2,9 +2,9 @@
 @mixin list__option(
     $img--width: 20rem,
     $img--height: 10rem,
-    $over_background: #f8f8f8,
+    $over_background: $light-backup,
     $show_background: rgba(0, 0, 0, .7),
-    $action: #3c82fc){
+    $action: $main-color){
 
     %list {
         list-style: none;

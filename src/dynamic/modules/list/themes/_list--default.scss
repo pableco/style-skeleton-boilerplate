@@ -1,13 +1,27 @@
 
-@mixin list__default($border: $base_01){
+@mixin list__default(
+    $border: $main-color,
+    $title-color: $main-color,
+    $img--width: 10rem,
+    $img--height: 10rem){
     %list{     
         &-item{
             padding: 2rem 0;
             border: 1px solid $border;
             &__img{
-                &-fix {}
+                display: none;
+                &-fix{
+                    width: $img--width;
+                    height: $img--height;
+                    background-position: 50% 50%;
+                    background-size: cover;
+                    background-position: center;
+                    background-repeat: no-repeat;
+                }
             }
-            &__title{}
+            &__title{
+                color: $title-color;
+            }
             &__text{}
             &__description{}
             &__content{}
