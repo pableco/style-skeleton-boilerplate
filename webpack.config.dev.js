@@ -11,8 +11,8 @@ module.exports = {
     // Relative to context path
     entry: {
         index: ['./example'],
-        option: ['./src/index-with-styles_o.js'], // just to compile styles
-        alternate: ['./src/index-with-styles_a.js'] // just to compile styles
+        option: ['./src/project_option/project_option.js'], // just to compile styles
+        alternate: ['./src/project_alternate/project_alternate.js'] // just to compile styles
     },
 
     // Webpack output config

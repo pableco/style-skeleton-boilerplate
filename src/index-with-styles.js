@@ -2,6 +2,6 @@
 // Intended to generate a dist build with webpack or to execute the example.
 // Do not use as an entry point or interface to outisde code.
 
-import './default.scss';
+import './project_default.scss';
 
 module.exports = require('./index');
