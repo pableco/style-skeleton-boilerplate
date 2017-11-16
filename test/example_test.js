@@ -20,13 +20,13 @@ describe('Example test', () => {
 
 describe('Hello', () => {
 
-    it('renders an H1', () => {
+    it.skip('renders an H1', () => {
         const data = { onEvent: () => { } };
         const wrapper = shallow(<Hello {...data}></Hello>);
         wrapper.is('h1').should.be.true;
     });
 
-    it('prints "hello world!"', () => {
+    it.skip('prints "hello world!"', () => {
         const wrapper = shallow(<Hello ></Hello>);
         wrapper.props().children.should.eql('hello world!');
     });

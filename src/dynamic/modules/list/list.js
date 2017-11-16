@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 
-export default class ExampleList extends React.Component {
+export default class ExampleList extends Component {
 
     render() {
         const imgBg = { backgroundImage: 'url(https://source.unsplash.com/random)' };
