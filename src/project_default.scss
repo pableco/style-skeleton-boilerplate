@@ -1,5 +1,5 @@
 // add dependency of 3rd party css here
-@import 'main';
+@import './dynamic/modules/list/layouts';
 
 @include list__default(){
     %list-item__title{

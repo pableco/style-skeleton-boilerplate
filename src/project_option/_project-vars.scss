@@ -27,7 +27,7 @@ $tabletv: md;
 $base_01: #ff0000;
 $base_02: #ab3333;
 $base_03: rgb(255, 193, 193);
-$second_01: rgb(18, 53, 193);
+$second_01: rgb(18, 161, 193);
 
 //form states
 
@@ -43,26 +43,26 @@ $icons_base: icons_base;
 $font1: Helvetica;
 $font2: Helvetica;
 $font3: Helvetica;
-$font4: Helvetica; 
-$font5: Helvetica; 
-$font6: Helvetica;  
+$font4: Helvetica;
+$font5: Helvetica;
+$font6: Helvetica; 
 $icons: icons;
 
-$font-face: $font1,$font2,$font3,$font4,$font5,$font6,$icons,$icons_base;
+$font-face: $font1, $font2, $font3, $font4, $font5, $font6, $icons, $icons_base;
 
 $fontsetbase: $font1, sans-serif;
 $fontset01: $font1, Arial, sans-serif;
 $fontset02: $font2, Arial, sans-serif;
 $fontset03: $font3, Arial, sans-serif;
-$fontset04: $font4, Arial, sans-serif; 
-$fontset05: $font5, Arial, sans-serif; 
-$fontset06: $font6, Arial, sans-serif; 
-$fontsize_base:62.5%;
+$fontset04: $font4, Arial, sans-serif;
+$fontset05: $font5, Arial, sans-serif;
+$fontset06: $font6, Arial, sans-serif;
+$fontsize_base: 62.5%;
 
 
 // items menu --------------------------------------------------------- 
 
-$visible_items:9;
+$visible_items: 9;
 
 
 //Popup footer
