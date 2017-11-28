@@ -4,7 +4,7 @@
 
 # Consideraciones para la actualización de estilos #
 
-Para hagilizar el mantenimiento y gestión de la demanda tenemos que controlar el proceso de escritura de CSS de los módulos en un punto comun para todos los proyectos web qe utilicen los módulos en cuestión.
+Para agilizar el mantenimiento y gestión de la demanda tenemos que controlar el proceso de escritura de CSS de los módulos en un punto comun para todos los proyectos web qe utilicen los módulos en cuestión.
 
 Esta libreria ejemplifica como desarrollar una estructura para los estilos que permite darle flexibilidad para los diferentes diseños a traves de "temas" y tener un esquelto de estilos que tenga la responsabilidad de escribir las clases css necesarias para el módulo.
 
