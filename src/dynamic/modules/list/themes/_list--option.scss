@@ -1,6 +1,6 @@
 
 @mixin list__option(
-    $img--width: 20rem,
+    $img--width: 12rem,
     $img--height: 10rem,
     $over_background: $light-backup,
     $show_background: rgba(0, 0, 0, .7),
@@ -26,6 +26,12 @@
                 &-fix {
                     width: $img--width;
                     height: $img--height;
+                    @media screen and (max-width: $screen_xs) {
+                        width: 20px;
+                    }
+                    @media screen and (min-width: $screen_md) {
+                        width: 30rem;
+                    }
                     background-position: 50% 50%;
                     background-size: cover;
                     background-position: center;
@@ -51,9 +57,7 @@
                 line-height: 4;
                 height: 50%;
                 letter-spacing: .1rem;
-                color: #fff;
-                border-bottom: solid .01rem #fff;
-                
+                color: $light-color;
             }
             &__action{
                 flex-grow: 3;
@@ -62,7 +66,7 @@
                 width: 90%;
                 margin: 5%;
                 height: 2rem;
-                color: #fff;
+                color: $light-color;
                 font-size: 1.2rem;
                 background: $action;
                 border: 2px solid darken($action, 30%);
