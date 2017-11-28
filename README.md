@@ -1,76 +1,101 @@
-# Component boilerplate project #
+# Ejemplo de maquetación de proyectos para dynamic template #
 
 [![build status](https://git.roiback.com/webmobile/REPO_URL/badges/master/build.svg)](https://git.roiback.com/webmobile/REPO_URL/builds)
 
-* This boilerplate is intended to be used to bootstrap a new front-end component project.
+# Consideraciones para la actualización de estilos #
 
-SonaQube Report:
-http://registry.roiback.com:9000/overview?id=roi-component-boilerplate
+Para hagilizar el mantenimiento y gestión de la demanda tenemos que controlar el proceso de escritura de CSS de los módulos en un punto comun para todos los proyectos web qe utilicen los módulos en cuestión.
 
-## Requirements ##
+Esta libreria ejemplifica como desarrollar una estructura para los estilos que permite darle flexibilidad para los diferentes diseños a traves de "temas" y tener un esquelto de estilos que tenga la responsabilidad de escribir las clases css necesarias para el módulo.
 
-* Node version >= 6.2
-* __Access to private npm repo__ (http://registry.roiback.com:4873/). **NOTE**: the .npmrc file contains the access token for the private repo. If this ever changes, you will need to use ```npm login``` in your dev machine to use the private repo.
+# Condiciones para la actualización del módulo #
 
+El HTML tiene que tener clases BEM en sus elementos de manera que sea facil de recorrer y se puedan escribir los estilos con baja especificidad por defecto: (0,0,1,0)
 
-## How to start a new project ##
+Se han creado documentos que ejemplifican el uso de clases BEM en html
+* [Como utilizar Nomenclatura BEM en módulos](https://git.roiback.com/libs/dynamic_templates/wikis/Nomenclatura-BEM)
 
-The main idea to start a new project is to download the boilerplate code and use it in the new project's repository.
-
-* Download the boilerplate as zip file
-
-* Extract the zip file
-
-* Create a new remote repository in GitLab (use the same name you used for the directory _<NEW_PROJECT_FOLDER>_). *NOTE: it is strongly recommended to use a prefix in the name of private repositories to indicate they are private. In our case we use roi-* 
-
-* In the directory where you extracted the code, init the repository:
+# Estructura de ficheros SCSS
 
 ```
-cd <your-directory>
-git init
-git remote add origin <repository-origin>
-git add .
-git commit
-git push -u origin master
+.
+|_____skeleton.scss
+|_____layouts.scss
+|____themes
+| |_____default.scss
+| |_____option.scss
+| |_____alternate.scss
 ```
 
-* Remember to add the "sonarqube" user to your project if you want sonarqube to analize this repo.
+# Ejemplo de "_skeleton.scss"
 
-* Configure GiLab Slack Service on the project with this Webhook ```https://hooks.slack.com/services/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```
+Es el unico fichero que puede escribir la clase en el CSS
 
-* Change the name of the project in ```package.json```, ```.gitlab-ci.yml``` and ```sonar-project.properties```
+```scss
+.mainclass {
+    @extend %mainclass !optional;
+    &__sub {
+        @extend %mainclass__sub !optional;
+    }
+    &__extra {
+        @extend %mainclass__extra !optional;
+    }
+    @content;
+}
+```
 
-* Install dependencies
+Siempre debe finalizar con @content para extender desde los demas ficheros los estilos personalizados.
+
+# Ejemplo de "_layouts.scss"
+
+```scss
+// add dependency of 3rd party css here
+@import "../../libraries/_basic_variables";
+@import "../../libraries/_resets";
+@import 'skeleton';
+
+@import 'themes/_default';
+@import 'themes/_option';
+@import 'themes/_alternate';
+```
+
+> Layouts importa las dependencias que tendrán los temas (varibales, resets, etc. y siempre el el fichero skeleton) de manera que se pueda genera el estilo del módulo de manera independiente.
+
+# Ejemplo de "/themes/_default"
+
+```scss
+@mixin mainclass__default(
+    $border: $main-color,
+    $sub--background-color: $main-color,
+    $sub--width: 10rem,
+    $screen_md: $screen_md,
+    $sub--height: 10rem){
+    %mainclass{
+        display: flex;     
+        &-sub{
+            
+            width: 100%;
+            height: $img--height;
+            @media screen and (min-width: $screen_md) {
+                width: $img--width;
+            }
+        }
+        &__title{
+            background-color: $sub--background-color;
+        }
+        @content;
+    }
+}
 
 ```
-npm i
-```
 
-* Start the development. This will command will start the development server builds, automatic testing and linting.
-
-```
-npm start
-```
-* Open ```example/index.html``` in a browser.
+La prioridad en los temas es que sea el esqueleto mínimo para luego personalizar en proyecto segun la necesidad del diseño:
+Todos los colores deben ser variables definidas en el mixing de una variable de color básica de la libreria. Tienen los media querys para su comportamiento en diferentes resoluciones que se definen con varibles en el mixing que vienen de las por defecto de la librería.
 
 
-### Publish the release of a package ###
+Los placeholders (%) reemplaza en el flujo de trabajo a las clases (.) para no cambiar la sintaxis de los estilos actuales, de esta forma los estilos previos a la actualización pueden refactorizarse con menor complejidad.
 
-When working with this repository, please follow the **[DEVELOPMENT GUIDE](https://roiback.atlassian.net/wiki/spaces/WM/pages/78681679/Gu+a+de+Desarrollo+de+Software+de+Web+Mobile+Mobilis)**. 
-
-
-Release a new version of the package:
-
-```
-npm run release:patch
-```
-or
-
-```
-npm run release:minor
-```
-or
-
-```
-npm run release:major
-```
+# Cómo regla general y para destacar:
+* Los media querys se estructuran mobile first se maqueta por defecto para resoluciones pequeñas pensando en que no existen hovers y luego se hacen los quiebres para resoluciones superiores.
+* El único fichero que puede escribir la clase css (.) es "_skeleton.scss" es mala practica que se esciban en proyecto o en otro fichero
+* Las unidades que utilizamos son REM. Solo para el caso de los botones usaremos EM.

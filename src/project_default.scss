@@ -2,13 +2,13 @@
 @import './dynamic/modules/list/layouts';
 //$title-color: #ccc
 @include list__default() {
-    // &{
-    //     list-style: none;
-    // }
-    // &.list--news{
-    //     display: flex;
-    // }
-    // %list-item__title{
-    //     color: #ccc;
-    // }
+    &{
+        list-style: none;
+    }
+    &.list--news{
+        display: flex;
+    }
+    %list-item__title{
+        color: #ccc;
+    }
 };
