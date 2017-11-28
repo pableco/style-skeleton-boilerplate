@@ -1,13 +1,13 @@
 
 @mixin list__default(
-    $border: $main-color,
+    $border: 1px solid $main-color,
     $title-color: $main-color,
     $img--width: 10rem,
     $img--height: 10rem){
     %list{     
         &-item{
             padding: 2rem 0;
-            border: 1px solid $border;
+            border: $border;
             &__img{
                 display: none;
                 &-fix{

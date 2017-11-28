@@ -65,7 +65,7 @@ Siempre debe finalizar con @content para extender desde los demas ficheros los e
 
 ```scss
 @mixin mainclass__default(
-    $border: $main-color,
+    $border: .1rem solid $main-color,
     $sub--background-color: $main-color,
     $sub--width: 10rem,
     $screen_md: $screen_md,
@@ -73,14 +73,14 @@ Siempre debe finalizar con @content para extender desde los demas ficheros los e
     %mainclass{
         display: flex;     
         &-sub{
-            
+            border: $border
             width: 100%;
             height: $img--height;
             @media screen and (min-width: $screen_md) {
                 width: $img--width;
             }
         }
-        &__title{
+        &__extra{
             background-color: $sub--background-color;
         }
         @content;
@@ -89,11 +89,30 @@ Siempre debe finalizar con @content para extender desde los demas ficheros los e
 
 ```
 
+Siempre debe finalizar con @content para extender desde los demas ficheros los estilos personalizados.
+
 La prioridad en los temas es que sea el esqueleto mínimo para luego personalizar en proyecto segun la necesidad del diseño:
 Todos los colores deben ser variables definidas en el mixing de una variable de color básica de la libreria. Tienen los media querys para su comportamiento en diferentes resoluciones que se definen con varibles en el mixing que vienen de las por defecto de la librería.
 
 
 Los placeholders (%) reemplaza en el flujo de trabajo a las clases (.) para no cambiar la sintaxis de los estilos actuales, de esta forma los estilos previos a la actualización pueden refactorizarse con menor complejidad.
+
+# Ejemplo de implementación en proyecto
+
+```scss
+@import './dynamic/modules/mainclass/layouts';
+
+@include mainclass__default(
+    $border: none,
+    $sub--background-color: green,
+    $sub--width: 15rem,
+    $sub--height: 20rem
+) {
+    %mainclass__extra::after{
+        content: '-----'
+    }
+};
+```
 
 # Cómo regla general y para destacar:
 * Los media querys se estructuran mobile first se maqueta por defecto para resoluciones pequeñas pensando en que no existen hovers y luego se hacen los quiebres para resoluciones superiores.
