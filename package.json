@@ -18,7 +18,8 @@
     "release:patch": "npm run prerelease && changelog -p && git add CHANGELOG.md && git commit -m 'updated CHANGELOG.md' && npm version patch && git push --follow-tags",
     "release:minor": "npm run prerelease && changelog -m && git add CHANGELOG.md && git commit -m 'updated CHANGELOG.md' && npm version minor && git push --follow-tags",
     "release:major": "npm run prerelease && changelog -M && git add CHANGELOG.md && git commit -m 'updated CHANGELOG.md' && npm version major && git push --follow-tags",
-    "postversion": "git push --follow-tags"
+    "postversion": "git push --follow-tags",
+    "style-lint": "node_modules/sass-lint/bin/sass-lint.js --config .scss-lint.yml '**/*.scss' --verbose --no-exit"
   },
   "repository": {
     "type": "git",
@@ -70,6 +71,7 @@
     "react": "^15.2.1",
     "react-addons-test-utils": "^15.2.1",
     "react-dom": "^15.2.1",
+    "sass-lint": "^1.12.1",
     "sass-loader": "^6.0.6",
     "style-loader": "^0.18.2",
     "webpack": "^1.15.0",

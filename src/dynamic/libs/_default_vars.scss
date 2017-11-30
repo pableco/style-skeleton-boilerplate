@@ -20,7 +20,7 @@ $tabletv: md !default;
 
 // Colors ---------------------------------------------------------
 
-$light-color : #fff !default;
+$light-color: #fff !default;
 $light-backup: darken($light-color, 2.6%) !default;
 $practically-light-color: darken($light-color, 10%) !default;
 $almost-light-color: darken($light-color, 20%) !default;
@@ -33,20 +33,19 @@ $almost-dark-color: darken($light-color, 80%) !default;
 $practically-dark-color: darken($light-color, 90%) !default;
 $dark-color: darken($light-color, 100%) !default;
 
-$main-color: #FFA300 !default;
-$custom-color: #84B044 !default;
+$main-color: #ffa300 !default;
+$custom-color: #84b044 !default;
 $corporate-color: #081f2c !default;
 $interaction-color: rgb(131, 203, 196) !default;
 $interaction-color-alpha: rgba(131, 203, 196, .5) !default;
 
 $success-color: #35a838 !default;
 $error-color: #cc3d33 !default;
-$warning-color: #FFEE58 !default;
+$warning-color: #ffee58 !default;
 
 // fonts --------------------------------------------------------- 
-@import url('https://fonts.googleapis.com/css?family=Lato:300,400,400i,700');
 
-$fontsetbase: Lato, "Helvetica Neue", Helvetica, Arial, sans-serif !default;
+$fontsetbase: Lato, 'Helvetica Neue', Helvetica, Arial, sans-serif !default;
 $fontsize_base: 62.5% !default;
 $fontsize_m: 81.3% !default;
 $fontsize_l: 100% !default;
@@ -57,26 +56,26 @@ $icons_base: icons_base !default;
 $font1: Helvetica !default;
 $font2: Helvetica !default;
 $font3: Helvetica !default;
-$font4: Helvetica !default; 
-$font5: Helvetica !default; 
-$font6: Helvetica !default;  
+$font4: Helvetica !default;
+$font5: Helvetica !default;
+$font6: Helvetica !default;
 $icons: icons !default;
 
-$font-face: $font1,$font2,$font3,$font4,$font5,$font6,$icons,$icons_base;
+$font-face: $font1, $font2, $font3, $font4, $font5, $font6, $icons, $icons_base;
 
 $fontsetbase: $font1, sans-serif !default;
 $fontset01: $font1, Arial, sans-serif !default;
 $fontset02: $font2, Arial, sans-serif !default;
 $fontset03: $font3, Arial, sans-serif !default;
-$fontset04: $font4, Arial, sans-serif !default; 
-$fontset05: $font5, Arial, sans-serif !default; 
-$fontset06: $font6, Arial, sans-serif !default; 
+$fontset04: $font4, Arial, sans-serif !default;
+$fontset05: $font5, Arial, sans-serif !default;
+$fontset06: $font6, Arial, sans-serif !default;
 
 
 
 // items menu --------------------------------------------------------- 
 
-$visible_items:9 !default;
+$visible_items: 9 !default;
 
 
 // z-index ---------------------------------------------------------
@@ -91,19 +90,19 @@ $z_superior: 1000 !default;
 $zz_top: 1200 !default;
 $zz_modal: 9999;
 
-$padding-vertical-s : .5rem;
+$padding-vertical-s: .5rem;
 $padding-horizontal-s: 1rem;
 
-$padding-vertical-b : .7rem;
+$padding-vertical-b: .7rem;
 $padding-horizontal-b: 1.4rem;
 
-$padding-vertical-l : 1rem;
+$padding-vertical-l: 1rem;
 $padding-horizontal-l: 2rem;
 
-$padding-vertical-xl : 1.5rem;
+$padding-vertical-xl: 1.5rem;
 $padding-horizontal-xl: 3rem;
 
-$padding-vertical-xxl : 2rem;
+$padding-vertical-xxl: 2rem;
 $padding-horizontal-xxl: 4rem;
 
 $roundfactor: 2.5rem !default;

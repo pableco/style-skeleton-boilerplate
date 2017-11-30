@@ -4,72 +4,88 @@
     $img--height: 10rem,
     $over_background: $light-backup,
     $show_background: rgba(0, 0, 0, .7),
-    $action: $main-color){
+    $background-action: $main-color
+    ){
 
     %list {
-        list-style: none;
         display: flex;
         flex-direction: row;
         flex-wrap: wrap;
         justify-content: center;
+        list-style: none;
+
+        &-figure {
+
+            &--hover {
+                @extend %hover-theme--duke;
+            }
+        }
+
         &-item {
-            position: relative;
             display: block;
-            &:hover{
+            position: relative;
+
+            &--hover {
+
                 background-color: $over_background;
-                & .list-item__content{
+
+                & .list-item__content {
                     display: flex;
                 }
+
             }
+
             &__img {
                 display: none;
+
                 &-fix {
-                    width: $img--width;
+                    @extend %background-cover;
                     height: $img--height;
+                    width: $img--width;
                     @media screen and (max-width: $screen_xs) {
                         width: 20px;
                     }
                     @media screen and (min-width: $screen_md) {
                         width: 30rem;
                     }
-                    background-position: 50% 50%;
-                    background-size: cover;
-                    background-position: center;
-                    background-repeat: no-repeat;
                 }
             }
-            &__title{
+
+            &__title {
                 text-transform: uppercase;
             }
-            &__content{
+
+            &__content {
+                background-color: $show_background;
+                display: none;
+                flex-direction: column;
+                height: 100%;
+                left: 0;
                 position: absolute;
                 top: 0;
-                left: 0;
                 width: 100%;
-                height: 100%;
-                display: none;
-                background-color: $show_background;
-                flex-direction: column;
             }
-            &__description{
+
+            &__description {
+                color: $light-color;
                 font-size: .85rem;
-                text-align: center;
-                line-height: 4;
                 height: 50%;
                 letter-spacing: .1rem;
-                color: $light-color;
+                line-height: 4;
+                text-align: center;
             }
-            &__action{
-                flex-grow: 3;
-                text-transform: uppercase;
+
+            &__action {
                 align-self: center;
-                width: 90%;
-                margin: 5%;
-                height: 2rem;
+                background: $background-action;
+                border: 2px solid darken($background-action, 30%);
                 color: $light-color;
+                flex-grow: 3;
                 font-size: 1.2rem;
-                background: $action;
-                border: 2px solid darken($action, 30%);
+                height: 2rem;
+                margin: 5%;
+                text-transform: uppercase;
+                width: 90%;
             }
         }
         @content;
