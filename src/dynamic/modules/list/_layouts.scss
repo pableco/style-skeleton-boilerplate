@@ -1,5 +1,7 @@
 @import 'skeleton';
 @import '../../libs/default_vars';
+@import '../../libs/overs';
+@import '../../libs/common';
 
 // @mixin list__template(){
 //     %list{
@@ -17,6 +19,6 @@
 //     }
 // }
 
-@import 'themes/_list--default.scss';
-@import 'themes/_list--option.scss';
-@import 'themes/_list--alternate.scss';
+@import 'themes/list--default';
+@import 'themes/list--option';
+@import 'themes/list--alternate';

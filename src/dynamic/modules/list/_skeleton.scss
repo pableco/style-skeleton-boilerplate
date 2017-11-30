@@ -1,42 +1,52 @@
-@import "../../libs/resets";
+@import '../../libs/resets';
 
 .list {
+
     @extend %list !optional;
-    
-    &-item{
+
+    &-item {
         @extend %list-item !optional;
 
-        &__title{
+        &--hover {
+            @extend %list-item--hover !optional;
+        }
+
+        &__title {
             @extend %list-item__title !optional;
         }
-        &__sub-title{
+
+        &__sub-title {
             @extend %list-item__sub-title !optional;
         }
-        &__content{
+
+        &__content {
             @extend %list-item__content !optional;
         }
 
-        &__description{
+        &__description {
             @extend %list-item__description !optional;
         }
 
-        &__img{
+        &__img {
             @extend %list-item__img !optional;
         }
 
-        &__img-fix{
+        &__img-fix {
             @extend %list-item__img-fix !optional;
         }
 
-        &__action{
+        &__action {
             @extend %list-item__action !optional;
         }
-        &__label{
+
+        &__label {
             @extend %list-item__label !optional;
         }
-        &__span-des{
-            @extend %list-item__span-des !optional;
+
+        &__span {
+            @extend %list-item__span !optional;
         }
+
     }
     @content;
 }

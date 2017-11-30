@@ -8,21 +8,23 @@ ol {
 
 html,
 body {
-    width: 100%;
     height: 99%;
+    width: 100%;
 }
 
 body {
     font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
 }
 
-.menu{
+.menu {
     text-align: center;
-    li{
-        padding: 1rem;
+
+    li {
         display: inline-block;
+        padding: 1rem;
     }
 }
-h1{
+
+h1 {
     text-align: center;
 }

@@ -3,29 +3,27 @@
     $border: 1px solid $main-color,
     $title-color: $main-color,
     $img--width: 10rem,
-    $img--height: 10rem){
-    %list{     
-        &-item{
-            padding: 2rem 0;
+    $img--height: 10rem
+    ){
+    %list {
+
+        &-item {
             border: $border;
-            &__img{
+            padding: 2rem 0;
+
+            &__img {
                 display: none;
-                &-fix{
-                    width: $img--width;
-                    height: $img--height;
-                    background-position: 50% 50%;
-                    background-size: cover;
-                    background-position: center;
-                    background-repeat: no-repeat;
-                }
             }
-            &__title{
+
+            &__img-fix {
+                @extend %background-cover;
+                height: $img--height;
+                width: $img--width;
+            }
+
+            &__title {
                 color: $title-color;
             }
-            &__text{}
-            &__description{}
-            &__content{}
-            &__button{}
         }
         @content;
     }

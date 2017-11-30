@@ -5,7 +5,7 @@ export default class ExampleList extends Component {
     render() {
         const imgBg = { backgroundImage: 'url(https://source.unsplash.com/random)' };
         return (
-            <li className="list-item">
+            <li className="list-item js--hover">
                 <figure className="list-figure">
                     <figcaption className="list-figcaption">
                         <h3 className="list-item__title">Título de test</h3>
@@ -18,6 +18,7 @@ export default class ExampleList extends Component {
                         <p className="list-item__description">description test</p>
                         <button className="list-item__action">Call now</button>
                     </div>
+                    <span className="list-item__span"></span>
 
                 </figure>
             </li>
