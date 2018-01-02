@@ -5,10 +5,10 @@
 
 import React from 'react';
 import chai from 'chai';
-import { mount, shallow } from 'enzyme';
+import { shallow } from 'enzyme';
 import Test from '../src/';
 
-import ExampleList from '../src/dynamic_templates/modules/list/list'
+import ExampleList from '../src/dynamic_templates/modules/list/list';
 
 chai.should();
 
@@ -26,7 +26,7 @@ describe('List test', () => {
 
     beforeEach(() => {
         data = {
-            classname:'--news'
+            classname: '--news'
         };
 
     });
