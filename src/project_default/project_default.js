@@ -4,4 +4,4 @@
 
 import './project_default.scss';
 
-module.exports = require('./index');
+module.exports = require('../index');

@@ -4,21 +4,24 @@
 @import '../../libs/common';
 
 // @mixin list__template(){
-//     %list{
+//     %list{    
 //         &-item{
-//             &__img{
-//                 &-fix {}
-//             }
+//             &--hover{}
 //             &__title{}
-//             &__text{}
-//             &__description{}
+//             &__sub-title{}
 //             &__content{}
-//             &__button{}
+//             &__description{}
+//             &__img {
+//                 &-fix{}
+//             }
 //             &__action{}
-//          } 
+//             &__label{}
+//             &__span{}
+//         }
+//     @content;
 //     }
 // }
-
+    
 @import 'themes/list--default';
 @import 'themes/list--option';
 @import 'themes/list--alternate';

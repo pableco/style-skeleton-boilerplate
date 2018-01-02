@@ -1,7 +1,7 @@
 /* eslint "import/no-extraneous-dependencies": ["error", {"devDependencies": true }] */
 import React from 'react';
 import ReactDOM from 'react-dom';
-import Test from '../src/index-with-styles';
+import Test from '../src/project_default/project_default';
 
 // Example of use of the component in an application
 
