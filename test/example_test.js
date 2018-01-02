@@ -5,30 +5,40 @@
 
 import React from 'react';
 import chai from 'chai';
-import { shallow } from 'enzyme';
-import Hello from '../src/';
+import { mount, shallow } from 'enzyme';
+import Test from '../src/';
+
+import ExampleList from '../src/dynamic_templates/modules/list/list'
 
 chai.should();
 
-describe('Example test', () => {
+describe('ExampleList', () => {
 
     it('example', () => {
-        true.should.be.true;
+        const wrapper = shallow(<ExampleList />);
+        wrapper.is('li').should.be.true;
     });
 
 });
 
-describe('Hello', () => {
+describe('List test', () => {
+    let data;
 
-    it.skip('renders an H1', () => {
-        const data = { onEvent: () => { } };
-        const wrapper = shallow(<Hello {...data}></Hello>);
-        wrapper.is('h1').should.be.true;
+    beforeEach(() => {
+        data = {
+            classname:'--news'
+        };
+
     });
 
-    it.skip('prints "hello world!"', () => {
-        const wrapper = shallow(<Hello ></Hello>);
-        wrapper.props().children.should.eql('hello world!');
+    it('renders a list', () => {
+        const wrapper = shallow(<Test {...data} />);
+        wrapper.is('ul').should.be.true;
+    });
+
+    it('prints "hello world!"', () => {
+        const wrapper = shallow(<Test />);
+        wrapper.find('ExampleList').length.should.eql(5);
     });
 
 });
