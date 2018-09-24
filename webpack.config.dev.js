@@ -1,4 +1,3 @@
-const open = require('open');
 const webpack = require('webpack');
 const ExtractTextPlugin = require('extract-text-webpack-plugin');
 const DashboardPlugin = require('webpack-dashboard/plugin');
@@ -65,6 +64,3 @@ module.exports = {
 
     devtool: 'source-map'
 };
-
-// Open the example in the browser
-open('http://localhost:8080');
