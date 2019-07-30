@@ -31,3 +31,7 @@ dist
 
 # MAC
 .DS_Store
+
+deploy/builds
+
+stats.json

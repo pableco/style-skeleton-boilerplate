@@ -1,6 +1,10 @@
 {
-  "presets": ["es2015", "react"],
+  "presets": [
+    "react",
+    "env"
+  ],
   "plugins": [
-    "add-module-exports"
-  ]
+    "transform-runtime",
+    "transform-object-rest-spread"
+  ],
 }

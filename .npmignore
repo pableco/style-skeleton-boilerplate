@@ -2,8 +2,11 @@ dist/stats.hml
 coverage
 test
 example
-webpack.config.dev.js
-webpack.config.dist.js
+webpack.dev.js
+webpack.common.js
+webpack.deploy.js
+webpack.prod.js
+postcss.config.js
 .babelrc
 .eslintignore
 .eslintrc
