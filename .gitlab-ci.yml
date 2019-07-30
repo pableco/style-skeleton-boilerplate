@@ -1,30 +1,69 @@
-image: jramcast/node-openjdk
+image: node:10-alpine
+
+stages:
+  - test
+  - quality
+  - deploy
+
+variables:
+  SONAR_URL: 'http://sonarqube.services.prod.roiback:9000'
+  SONAR_LOGIN: '56b121aa8ef455cea81c9088cf0bd102c8fc314e'
 
 cache:
+  key: ${CI_COMMIT_REF_SLUG}
   paths:
   - node_modules/
-  - sonar-scanner-2.6.1/
 
 lint:
+  stage: test
   script:
-  - npm install
+  - npm ci
   - npm run lint
 
 unit_tests:
+  stage: test
   script:
-  - npm install
-  - npm test
-  - npm run check-coverage
-  - "[ -d sonar-scanner-2.6.1 ] || curl --insecure -OL https://sonarsource.bintray.com/Distribution/sonar-scanner-cli/sonar-scanner-2.6.1.zip"
-  - "[ -d sonar-scanner-2.6.1 ] || unzip sonar-scanner-2.6.1.zip"
-  - ./sonar-scanner-2.6.1/bin/sonar-scanner -Dsonar.host.url=http://registry.roiback.com:9000
+  - npm ci
+  - npm run test:ci
+  artifacts:
+    paths:
+      - coverage
+    expire_in: 1 day
+
+
 
 publish:
   stage: deploy
   script:
-    - npm install
+    - npm ci
     - npm run dist
     - npm publish
   only:
     - tags
     - triggers
+
+
+sonar-quality-gate:
+  image: jramcast/gitlab-ci-sonarqube
+  stage: quality
+  script:
+    # Publica report en sonarqube y Chequea si pasamos el quality gate
+    - sonar-scanner -Dsonar.projectVersion=${CI_COMMIT_SHA}
+  # No está claro todavía como vamos a configurar los quality gates de sonarqube para que fallen
+  # Así que de momento, prefiero no bloquear los pipelines
+  allow_failure: true
+
+
+sonar-comments:
+  image: jramcast/gitlab-ci-sonarqube
+  stage: quality
+  except:
+    - master
+  script:
+    # Añade comentarios en Gitlab con los issues encontrados (sin publicar report).
+    # Para esto es necesario configurar el Gitlab User Token en la config del proyecto
+    # http://sonarqube.services.prod.roiback:9000/project/settings?category=gitlab&id=bookcore_client
+    - sonar-scanner-preview -Dsonar.projectVersion=${CI_COMMIT_SHA}
+  # No está claro todavía como vamos a configurar los fallos de sonarqube
+  # Así que de momento, prefiero no bloquear los pipelines
+  allow_failure: true

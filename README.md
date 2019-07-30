@@ -72,7 +72,7 @@ Siempre debe finalizar con @content para extender desde los demas ficheros los e
     $screen-md: $screen_md, // variable librería o proyecto
     ){
     %mainclass{
-        display: flex;     
+        display: flex;
         &-sub{
             border: $border
             width: 100%;

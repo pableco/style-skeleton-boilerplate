@@ -1,4 +1,4 @@
-/* eslint-env node, mocha */
+/* eslint-env node, jest */
 /* eslint "import/no-extraneous-dependencies": ["error", {"devDependencies": true }] */
 /* eslint-disable no-unused-expressions */
 /* eslint-disable max-statements */
@@ -6,7 +6,7 @@
 import React from 'react';
 import chai from 'chai';
 import { shallow } from 'enzyme';
-import Test from '../src/';
+import Test from '../src';
 
 import ExampleList from '../src/dynamic_templates/modules/list/list';
 
@@ -26,7 +26,7 @@ describe('List test', () => {
 
     beforeEach(() => {
         data = {
-            classname: '--news'
+            classname: '--news',
         };
 
     });
