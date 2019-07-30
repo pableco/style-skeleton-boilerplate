@@ -12,7 +12,6 @@
     "prerelease": "npm ci && npm run lint && npm run cleancoverage && npm run check-master && npm run test:ci",
     "clean": "rm -rf dist && mkdir dist",
     "predist": "npm run clean",
-    "lint": "eslint .",
     "check-master": "git symbolic-ref --short HEAD | grep ^master$ > /dev/null || (echo \"Not in 'master' branch. Aborting release\"; return 1)",
     "release:patch": "npm run prerelease && changelog -p && git add CHANGELOG.md && git commit -m 'updated CHANGELOG.md' && npm version patch",
     "release:minor": "npm run prerelease && changelog -p && git add CHANGELOG.md && git commit -m 'updated CHANGELOG.md' && npm version minor",
@@ -20,6 +19,8 @@
     "prepare": "npm run dist",
     "postversion": "git push --follow-tags",
     "deploy": "webpack --config webpack.deploy.js && surge ./deploy/builds/ [nombre componente eg:'roi-tabs'].surge.sh",
+    "lint": "eslint . && npm run style-lint",
+    "lint:fix": "eslint . --fix",
     "style-lint": "node_modules/sass-lint/bin/sass-lint.js --config .scss-lint.yml '**/*.scss' --verbose --no-exit"
   },
   "repository": {
