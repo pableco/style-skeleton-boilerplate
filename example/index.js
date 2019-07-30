@@ -7,10 +7,10 @@ import Test from '../src/project_default/project_default';
 
 ReactDOM.render(
     <Test classname={'--offers'}/>,
-    document.getElementById('offers')
+    document.getElementById('offers'),
 );
 
 ReactDOM.render(
     <Test classname={'--news'}/>,
-    document.getElementById('news')
+    document.getElementById('news'),
 );
