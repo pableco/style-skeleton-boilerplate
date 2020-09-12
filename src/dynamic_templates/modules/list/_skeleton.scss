@@ -1,7 +1,6 @@
 @import '../../libs/resets';
 
 .list {
-
     @extend %list !optional;
 
     &-item {
@@ -46,7 +45,5 @@
         &__span {
             @extend %list-item__span !optional;
         }
-
     }
-
 }
