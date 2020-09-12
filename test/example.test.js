@@ -33,7 +33,6 @@ describe('component snapshoot', () => {
     });
 });
 
-
 describe('ExampleList', () => {
 
     it('example', () => {
