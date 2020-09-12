@@ -1,25 +1,26 @@
+/* eslint "import/no-extraneous-dependencies": ["error", {"devDependencies": true }] */
 const path = require('path');
 const webpack = require('webpack');
-const packageJSON = require('./package.json');
 const { merge } = require('webpack-merge');
+const packageJSON = require('./package.json');
 const common = require('./webpack.common.js');
 
 const reactExternal = {
     root: 'React',
     commonjs2: 'react',
     commonjs: 'react',
-    amd: 'react'
+    amd: 'react',
 };
 
 const reactDOMExternal = {
     root: 'ReactDOM',
     commonjs2: 'react-dom',
     commonjs: 'react-dom',
-    amd: 'react-dom'
+    amd: 'react-dom',
 };
 
 const ENTRY_POINTS = {
-    index: ['./src/index.js']
+    index: ['./src/index.js'],
 };
 
 const OUTPUT_CONFIG = {
@@ -33,7 +34,7 @@ const OUTPUT_CONFIG = {
     // Change it for the name you want your component to have as window.NAME
     library: '#LIB_NAME#',
 
-    libraryTarget: 'umd'
+    libraryTarget: 'umd',
 };
 
 module.exports = merge(common, {
@@ -45,12 +46,12 @@ module.exports = merge(common, {
             // removes a lot of debugging code in React
             'process.env': {
                 BROWSER: true,
-                VERSION: JSON.stringify(packageJSON.version)
-            }
-        })
+                VERSION: JSON.stringify(packageJSON.version),
+            },
+        }),
     ],
     externals: {
-        'react': reactExternal,
-        'react-dom': reactDOMExternal
-    }
+        react: reactExternal,
+        'react-dom': reactDOMExternal,
+    },
 });
