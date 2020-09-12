@@ -3,5 +3,6 @@
 // Do not use as an entry point or interface to outisde code.
 
 import './project_option.scss';
+import Example from '../index';
 
-module.exports = require('../index');
+export default Example;
