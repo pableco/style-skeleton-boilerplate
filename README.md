@@ -1,10 +1,10 @@
 # Ejemplo de maquetación de proyectos para dynamic template #
 
-[![build status](https://git.roiback.com/webmobile/REPO_URL/badges/master/build.svg)](https://git.roiback.com/webmobile/REPO_URL/builds)
+[![build status](https:///REPO_URL/badges/master/build.svg)](https:///REPO_URL/builds)
 
 ## Consideraciones para la actualización de estilos
 
-Para agilizar el mantenimiento y gestión de la demanda tenemos que controlar el proceso de escritura de CSS de los módulos en un punto común para todos los proyectos web qe utilicen los módulos en cuestión.
+Para agilizar el mantenimiento y gestión de la demanda de los proyecto web tenemos que controlar el proceso de escritura de CSS de los módulos en un punto común para poner en producción la menor cantidad de código de estilo y fomentar la utilización de los módulos html reutilizables.
 
 Esta librería ejemplifica como desarrollar una estructura para los estilos que permite darle flexibilidad para los diferentes diseños a través de "temas" y tener un esqueleto de estilos que tenga la responsabilidad de escribir las clases css necesarias para el módulo.
 
@@ -13,7 +13,7 @@ Esta librería ejemplifica como desarrollar una estructura para los estilos que 
 El HTML tiene que tener clases BEM en sus elementos de manera que sea facil de recorrer y se puedan escribir los estilos con baja especificidad por defecto: (0,0,1,0)
 
 Se han creado documentos que ejemplifican el uso de clases BEM en html
-* [Como utilizar Nomenclatura BEM en módulos](https://git.roiback.com/libs/dynamic_templates/wikis/Nomenclatura-BEM)
+* [Como utilizar Nomenclatura BEM en módulos](https:///dynamic_templates/wikis/Nomenclatura-BEM)
 
 ## Estructura de ficheros SCSS
 
@@ -74,7 +74,7 @@ Siempre debe finalizar con @content para extender desde los demas ficheros los e
     %mainclass{
         display: flex;
         &-sub{
-            border: $border
+            border: $border;
             width: 100%;
             height: $img-height;
             @media screen and (min-width: $screen-md) {

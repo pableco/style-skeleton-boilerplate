@@ -1,5 +1,5 @@
 module.exports = {
-    setupTestFrameworkScriptFile: '<rootDir>test/setup.js',
+    setupFilesAfterEnv: ['<rootDir>test/setup.js'],
     collectCoverage: true,
     coverageDirectory: 'coverage/',
     coverageReporters: ['lcov', 'text'],
