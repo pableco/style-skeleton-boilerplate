@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import ExampleList from './dynamic_templates/modules/list/list';
 
-export default class Test extends Component {
+export default class Example extends Component {
 
     render() {
         const classNameList = `list list${this.props.classname}`;
@@ -15,5 +15,4 @@ export default class Test extends Component {
             </ul>
         );
     }
-
 }

@@ -4,6 +4,21 @@ const DuplicatePackageCheckerPlugin = require('duplicate-package-checker-webpack
 const JS_RULES = {
     test: /\.(js|jsx)$/,
     loader: 'babel-loader',
+    options: {
+        presets: [
+            "@babel/preset-react",
+            "@babel/preset-env"
+        ],
+        plugins: [
+            [
+                "@babel/plugin-transform-runtime",
+                {
+                "corejs": 2
+                }
+            ],
+            "@babel/plugin-proposal-object-rest-spread"
+        ],
+    },
 	exclude: {
 		test: /node_modules\/(?!roi-.*)/,
 	}
@@ -18,7 +33,7 @@ const CSS_RULES = {
     ]
 };
 
-const LESS_RULES = {
+const SCSS_RULES = {
     test: /\.scss$/,
     use: [
         MiniCssExtractPlugin.loader,
@@ -56,7 +71,7 @@ module.exports = {
         rules: [
             JS_RULES,
             CSS_RULES,
-            LESS_RULES,
+            SCSS_RULES,
             IMAGES_RULES,
             SVG_RULES
         ]
