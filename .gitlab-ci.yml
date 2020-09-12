@@ -6,8 +6,8 @@ stages:
   - deploy
 
 variables:
-  SONAR_URL: 'http://sonarqube.services.prod.roiback:9000'
-  SONAR_LOGIN: '56b121aa8ef455cea81c9088cf0bd102c8fc314e'
+  SONAR_URL: 'http://sonarqube.services.url:port'
+  SONAR_LOGIN: '--your sonar login--'
 
 cache:
   key: ${CI_COMMIT_REF_SLUG}
@@ -44,26 +44,18 @@ publish:
 
 
 sonar-quality-gate:
-  image: jramcast/gitlab-ci-sonarqube
+  image: gitlab-ci-sonarqube-image
   stage: quality
   script:
-    # Publica report en sonarqube y Chequea si pasamos el quality gate
     - sonar-scanner -Dsonar.projectVersion=${CI_COMMIT_SHA}
-  # No está claro todavía como vamos a configurar los quality gates de sonarqube para que fallen
-  # Así que de momento, prefiero no bloquear los pipelines
   allow_failure: true
 
 
 sonar-comments:
-  image: jramcast/gitlab-ci-sonarqube
+  image: gitlab-ci-sonarqube-image
   stage: quality
   except:
     - master
   script:
-    # Añade comentarios en Gitlab con los issues encontrados (sin publicar report).
-    # Para esto es necesario configurar el Gitlab User Token en la config del proyecto
-    # http://sonarqube.services.prod.roiback:9000/project/settings?category=gitlab&id=bookcore_client
     - sonar-scanner-preview -Dsonar.projectVersion=${CI_COMMIT_SHA}
-  # No está claro todavía como vamos a configurar los fallos de sonarqube
-  # Así que de momento, prefiero no bloquear los pipelines
   allow_failure: true
