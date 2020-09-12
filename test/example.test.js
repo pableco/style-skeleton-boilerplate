@@ -4,19 +4,41 @@
 /* eslint-disable max-statements */
 
 import React from 'react';
-import chai from 'chai';
 import { shallow } from 'enzyme';
-import Test from '../src';
+import renderer from 'react-test-renderer';
 
+import Test from '../src';
 import ExampleList from '../src/dynamic_templates/modules/list/list';
 
-chai.should();
+const props = {
+    classname: '--news',
+};
+
+describe('component snapshoot', () => {
+
+    it('render without props', () => {
+        const wrapper = renderer.create(
+            <ExampleList />,
+        ).toJSON();
+
+        expect(wrapper).toMatchSnapshot();
+    });
+
+    it('render with all props', () => {
+        const wrapper = renderer.create(
+            <ExampleList {...props}/>,
+        ).toJSON();
+
+        expect(wrapper).toMatchSnapshot();
+    });
+});
 
 describe('ExampleList', () => {
 
     it('example', () => {
         const wrapper = shallow(<ExampleList />);
-        wrapper.is('li').should.be.true;
+
+        expect(wrapper.type()).toBe('li');
     });
 
 });
@@ -26,19 +48,21 @@ describe('List test', () => {
 
     beforeEach(() => {
         data = {
-            classname: '--news',
+            ...props,
         };
 
     });
 
     it('renders a list', () => {
         const wrapper = shallow(<Test {...data} />);
-        wrapper.is('ul').should.be.true;
+
+        expect(wrapper.type()).toBe('ul');
     });
 
-    it('prints "hello world!"', () => {
+    it('check length of the list', () => {
         const wrapper = shallow(<Test />);
-        wrapper.find('ExampleList').length.should.eql(5);
+
+        expect(wrapper.find('ExampleList')).toHaveLength(5);
     });
 
 });
