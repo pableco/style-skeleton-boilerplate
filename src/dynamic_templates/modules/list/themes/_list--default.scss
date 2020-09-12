@@ -4,9 +4,8 @@
     $title-color: $main-color,
     $img--width: 10rem,
     $img--height: 10rem
-    ){
+) {
     %list {
-
         &-item {
             border: $border;
             padding: 2rem 0;
@@ -17,6 +16,7 @@
 
             &__img-fix {
                 @extend %background-cover;
+
                 height: $img--height;
                 width: $img--width;
             }

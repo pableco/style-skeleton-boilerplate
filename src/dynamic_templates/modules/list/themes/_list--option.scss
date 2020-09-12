@@ -5,7 +5,7 @@
     $over_background: $light-backup,
     $show_background: rgba(0, 0, 0, .7),
     $background-action: $main-color
-    ){
+) {
 
     %list {
         display: flex;
@@ -15,7 +15,6 @@
         list-style: none;
 
         &-figure {
-
             &--hover {
                 @extend %hover-theme--duke;
             }
@@ -26,13 +25,11 @@
             position: relative;
 
             &--hover {
-
                 background-color: $over_background;
 
                 & .list-item__content {
                     display: flex;
                 }
-
             }
 
             &__img {
@@ -40,11 +37,14 @@
 
                 &-fix {
                     @extend %background-cover;
+
                     height: $img--height;
                     width: $img--width;
+
                     @media screen and (max-width: $screen_xs) {
                         width: 20px;
                     }
+
                     @media screen and (min-width: $screen_md) {
                         width: 30rem;
                     }

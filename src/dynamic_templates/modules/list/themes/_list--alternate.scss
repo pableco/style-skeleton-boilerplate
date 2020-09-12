@@ -5,9 +5,8 @@
     $button-text: $light-backup,
     $button-color: $corporate-color,
     $img-round: $roundfactor
-    ){
+) {
     %list {
-
         display: flex;
         flex-direction: row;
         flex-wrap: wrap;
@@ -31,11 +30,11 @@
             }
 
             &__img {
-
                 display: none;
 
                 &-fix {
                     @extend %background-cover;
+
                     border: 0;
                     border-radius: $img-round;
                     height: $img--height;

@@ -35,3 +35,5 @@ dist
 deploy/builds
 
 stats.json
+
+styleLintReport.txt
