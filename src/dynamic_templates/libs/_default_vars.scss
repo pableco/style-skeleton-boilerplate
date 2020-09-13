@@ -43,7 +43,8 @@ $success-color: #35a838 !default;
 $error-color: #cc3d33 !default;
 $warning-color: #ffee58 !default;
 
-// fonts --------------------------------------------------------- 
+// fonts ---------------------------------------------------------
+/* stylelint-disable value-keyword-case */
 
 $fontsetbase: Lato, 'Helvetica Neue', Helvetica, Arial, sans-serif !default;
 $fontsize_base: 62.5% !default;
@@ -71,12 +72,11 @@ $fontset04: $font4, Arial, sans-serif !default;
 $fontset05: $font5, Arial, sans-serif !default;
 $fontset06: $font6, Arial, sans-serif !default;
 
+/* stylelint-enable value-keyword-case */
 
-
-// items menu --------------------------------------------------------- 
+// items menu ---------------------------------------------------------
 
 $visible_items: 9 !default;
-
 
 // z-index ---------------------------------------------------------
 

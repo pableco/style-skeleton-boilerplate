@@ -13,12 +13,12 @@ exports[`component snapshoot render with all props 1`] = `
       <h3
         className="list-item__title"
       >
-        Título de test
+        Test title
       </h3>
       <h4
         className="list-item__sub-title"
       >
-        Sub Título de test
+        Subtitle test
       </h4>
     </figcaption>
     <div
@@ -30,7 +30,7 @@ exports[`component snapshoot render with all props 1`] = `
       }
     />
     <img
-      alt="test"
+      alt="Test title image"
       className="list-item__img"
       src="https://source.unsplash.com/random"
     />
@@ -40,7 +40,8 @@ exports[`component snapshoot render with all props 1`] = `
       <p
         className="list-item__description"
       >
-        description test
+        Aenean vitae neque ultricies, egestas eros non, bibendum purus.
+    Suspendisse sodales quam non lectus imperdiet dignissim.
       </p>
       <button
         className="list-item__action"
@@ -68,12 +69,12 @@ exports[`component snapshoot render without props 1`] = `
       <h3
         className="list-item__title"
       >
-        Título de test
+        Test title
       </h3>
       <h4
         className="list-item__sub-title"
       >
-        Sub Título de test
+        Subtitle test
       </h4>
     </figcaption>
     <div
@@ -85,7 +86,7 @@ exports[`component snapshoot render without props 1`] = `
       }
     />
     <img
-      alt="test"
+      alt="Test title image"
       className="list-item__img"
       src="https://source.unsplash.com/random"
     />
@@ -95,7 +96,8 @@ exports[`component snapshoot render without props 1`] = `
       <p
         className="list-item__description"
       >
-        description test
+        Aenean vitae neque ultricies, egestas eros non, bibendum purus.
+    Suspendisse sodales quam non lectus imperdiet dignissim.
       </p>
       <button
         className="list-item__action"

@@ -1,13 +1,14 @@
+/* eslint "import/no-extraneous-dependencies": ["error", {"devDependencies": true }] */
 const path = require('path');
 const webpack = require('webpack');
-const packageJSON = require('./package.json');
 const { merge } = require('webpack-merge');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
+const packageJSON = require('./package.json');
 
 const common = require('./webpack.common.js');
 
 const ENTRY_POINTS = {
-    index: ['./example/index.js']
+    index: ['./example/index.js'],
 };
 
 const OUTPUT_CONFIG = {
@@ -21,7 +22,7 @@ const OUTPUT_CONFIG = {
     // Change it for the name you want your component to have as window.NAME
     library: 'Boilerplate',
 
-    libraryTarget: 'umd'
+    libraryTarget: 'umd',
 };
 
 module.exports = merge(common, {
@@ -33,13 +34,13 @@ module.exports = merge(common, {
             // removes a lot of debugging code in React
             'process.env': {
                 BROWSER: true,
-                VERSION: JSON.stringify(packageJSON.version)
-            }
+                VERSION: JSON.stringify(packageJSON.version),
+            },
         }),
         new HtmlWebpackPlugin({
             hash: true,
             filename: './index.html',
-            template: './deploy/deploy.html'
-        })
-    ]
+            template: './deploy/deploy.html',
+        }),
+    ],
 });
