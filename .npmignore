@@ -18,3 +18,4 @@ postcss.config.js
 .vscode
 sonar-scanner-2.6.1
 sonar-scanner-2.6.1.zip
+styleLintReport.txt
