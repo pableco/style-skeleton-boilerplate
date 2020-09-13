@@ -4,15 +4,21 @@ import ExampleList from './dynamic_templates/modules/list/list';
 export default class Example extends Component {
 
     render() {
-        const classNameList = `list list${this.props.classname}`;
+        const {
+            classname,
+            items,
+        } = this.props;
+        const classNameList = `list list${classname}`;
+        const itemsList = items.map((item) => <ExampleList key={item}/>);
+
         return (
             <ul className={classNameList}>
-                <ExampleList/>
-                <ExampleList/>
-                <ExampleList/>
-                <ExampleList/>
-                <ExampleList/>
+                {itemsList}
             </ul>
         );
     }
 }
+
+Example.defaultProps = {
+    items: [1, 2, 3, 4, 5],
+};
