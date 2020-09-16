@@ -1,20 +1,20 @@
 // add dependency of 3rd party css here
 @import '../dynamic_templates/modules/list/layouts';
-//$title-color: #ccc
-@include list__default {
-    & {
+
+@include list__default() {
+    %list {
         list-style: none;
     }
 
-    &.list--news {
+    .list--news {
         display: flex;
     }
 
-    %list-item__title {
-        color: $almost-light-color;
+    %listItem__title {
+        color: $neutral700;
     }
 
-    // & {
-    //     display: none;
-    // }
+    %listItem__subTitle {
+        color: $neutral500;
+    }
 }
