@@ -1,3 +1,4 @@
+/* eslint-disable max-len */
 module.exports = {
     setupFilesAfterEnv: ['<rootDir>test/setup.js'],
     collectCoverage: true,
@@ -17,8 +18,9 @@ module.exports = {
         '^.+\\.(js|jsx)$': 'babel-jest',
     },
     verbose: true,
-    transformIgnorePatterns: ['/node_modules/(?!roi-.*)'],
+    transformIgnorePatterns: ['/node_modules/(?!@cdg.*)'],
     moduleNameMapper: {
-        '.svg': '<rootDir>/test/__mocks__/fileMock.js',
+        '\\.(jpg|jpeg|png|gif|eot|otf|webp|svg|ttf|woff|woff2|mp4|webm|wav|mp3|m4a|aac|oga)$': '<rootDir>/__mocks__/fileMock.js',
+        '\\.(css|less|scss)$': 'identity-obj-proxy',
     },
 };

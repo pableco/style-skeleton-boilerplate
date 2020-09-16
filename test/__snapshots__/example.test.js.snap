@@ -2,27 +2,27 @@
 
 exports[`component snapshoot render with all props 1`] = `
 <li
-  className="list-item js--hover"
+  className="listItem js--hover"
 >
   <figure
-    className="list-figure"
+    className="listItem__figure"
   >
     <figcaption
-      className="list-figcaption"
+      className="listItem__figcaption"
     >
       <h3
-        className="list-item__title"
+        className="listItem__title"
       >
         Test title
       </h3>
       <h4
-        className="list-item__sub-title"
+        className="listItem__subTitle"
       >
         Subtitle test
       </h4>
     </figcaption>
     <div
-      className="list-item__img-fix"
+      className="listItem__imgFix"
       style={
         Object {
           "backgroundImage": "url(https://source.unsplash.com/random)",
@@ -31,26 +31,26 @@ exports[`component snapshoot render with all props 1`] = `
     />
     <img
       alt="Test title image"
-      className="list-item__img"
+      className="listItem__img"
       src="https://source.unsplash.com/random"
     />
     <div
-      className="list-item__content"
+      className="listItem__content"
     >
       <p
-        className="list-item__description"
+        className="listItem__description"
       >
         Aenean vitae neque ultricies, egestas eros non, bibendum purus.
     Suspendisse sodales quam non lectus imperdiet dignissim.
       </p>
       <button
-        className="list-item__action"
+        className="listItem__action"
       >
         Call now
       </button>
     </div>
     <span
-      className="list-item__span"
+      className="listItem__extra"
     />
   </figure>
 </li>
@@ -58,27 +58,27 @@ exports[`component snapshoot render with all props 1`] = `
 
 exports[`component snapshoot render without props 1`] = `
 <li
-  className="list-item js--hover"
+  className="listItem js--hover"
 >
   <figure
-    className="list-figure"
+    className="listItem__figure"
   >
     <figcaption
-      className="list-figcaption"
+      className="listItem__figcaption"
     >
       <h3
-        className="list-item__title"
+        className="listItem__title"
       >
         Test title
       </h3>
       <h4
-        className="list-item__sub-title"
+        className="listItem__subTitle"
       >
         Subtitle test
       </h4>
     </figcaption>
     <div
-      className="list-item__img-fix"
+      className="listItem__imgFix"
       style={
         Object {
           "backgroundImage": "url(https://source.unsplash.com/random)",
@@ -87,26 +87,26 @@ exports[`component snapshoot render without props 1`] = `
     />
     <img
       alt="Test title image"
-      className="list-item__img"
+      className="listItem__img"
       src="https://source.unsplash.com/random"
     />
     <div
-      className="list-item__content"
+      className="listItem__content"
     >
       <p
-        className="list-item__description"
+        className="listItem__description"
       >
         Aenean vitae neque ultricies, egestas eros non, bibendum purus.
     Suspendisse sodales quam non lectus imperdiet dignissim.
       </p>
       <button
-        className="list-item__action"
+        className="listItem__action"
       >
         Call now
       </button>
     </div>
     <span
-      className="list-item__span"
+      className="listItem__extra"
     />
   </figure>
 </li>
