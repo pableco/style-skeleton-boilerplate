@@ -1,49 +1,53 @@
+/* postcss-bem-linter: define list */
+
 @import '../../libs/resets';
 
 .list {
     @extend %list !optional;
+}
 
-    &-item {
-        @extend %list-item !optional;
+/* postcss-bem-linter: define listItem */
 
-        &--hover {
-            @extend %list-item--hover !optional;
-        }
+.listItem {
+    @extend %listItem !optional;
 
-        &__title {
-            @extend %list-item__title !optional;
-        }
+    &--hover {
+        @extend %listItem--hover !optional;
+    }
 
-        &__sub-title {
-            @extend %list-item__sub-title !optional;
-        }
+    &__title {
+        @extend %listItem__title !optional;
+    }
 
-        &__content {
-            @extend %list-item__content !optional;
-        }
+    &__subTitle {
+        @extend %listItem__subTitle !optional;
+    }
 
-        &__description {
-            @extend %list-item__description !optional;
-        }
+    &__content {
+        @extend %listItem__content !optional;
+    }
 
-        &__img {
-            @extend %list-item__img !optional;
-        }
+    &__description {
+        @extend %listItem__description !optional;
+    }
 
-        &__img-fix {
-            @extend %list-item__img-fix !optional;
-        }
+    &__img {
+        @extend %listItem__img !optional;
+    }
 
-        &__action {
-            @extend %list-item__action !optional;
-        }
+    &__imgFix {
+        @extend %listItem__imgFix !optional;
+    }
 
-        &__label {
-            @extend %list-item__label !optional;
-        }
+    &__action {
+        @extend %listItem__action !optional;
+    }
 
-        &__span {
-            @extend %list-item__span !optional;
-        }
+    &__label {
+        @extend %listItem__label !optional;
+    }
+
+    &__extra {
+        @extend %listItem__extra !optional;
     }
 }

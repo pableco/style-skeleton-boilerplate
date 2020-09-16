@@ -2,92 +2,91 @@
 @mixin list__option(
     $img--width: 12rem,
     $img--height: 10rem,
-    $over_background: $light-backup,
+    $over_background: $neutral010,
     $show_background: rgba(0, 0, 0, .7),
     $background-action: $main-color
 ) {
-
     %list {
         display: flex;
         flex-direction: row;
         flex-wrap: wrap;
         justify-content: center;
         list-style: none;
-
-        &-figure {
-            &--hover {
-                @extend %hover-theme--duke;
-            }
-        }
-
-        &-item {
-            display: block;
-            position: relative;
-
-            &--hover {
-                background-color: $over_background;
-
-                & .list-item__content {
-                    display: flex;
-                }
-            }
-
-            &__img {
-                display: none;
-
-                &-fix {
-                    @extend %background-cover;
-
-                    height: $img--height;
-                    width: $img--width;
-
-                    @media screen and (max-width: $screen_xs) {
-                        width: 20px;
-                    }
-
-                    @media screen and (min-width: $screen_md) {
-                        width: 30rem;
-                    }
-                }
-            }
-
-            &__title {
-                text-transform: uppercase;
-            }
-
-            &__content {
-                background-color: $show_background;
-                display: none;
-                flex-direction: column;
-                height: 100%;
-                left: 0;
-                position: absolute;
-                top: 0;
-                width: 100%;
-            }
-
-            &__description {
-                color: $light-color;
-                font-size: .85rem;
-                height: 50%;
-                letter-spacing: .1rem;
-                line-height: 4;
-                text-align: center;
-            }
-
-            &__action {
-                align-self: center;
-                background: $background-action;
-                border: 2px solid darken($background-action, 30%);
-                color: $light-color;
-                flex-grow: 3;
-                font-size: 1.2rem;
-                height: 2rem;
-                margin: 5%;
-                text-transform: uppercase;
-                width: 90%;
-            }
-        }
-        @content;
     }
+
+    %listItem {
+        display: block;
+        position: relative;
+
+        &--hover {
+            background-color: $over_background;
+
+            & .listItem__content {
+                display: flex;
+            }
+        }
+
+        &__figure {
+            &--hover {
+                @extend %hover;
+            }
+        }
+
+        &__img {
+            display: none;
+        }
+
+        &__imgFix {
+            @extend %background-cover;
+
+            height: $img--height;
+            width: $img--width;
+
+            @media screen and (max-width: $screen_xs) {
+                width: 2rem;
+            }
+
+            @media screen and (min-width: $screen_md) {
+                width: 30rem;
+            }
+        }
+
+        &__title {
+            text-transform: uppercase;
+        }
+
+        &__content {
+            background-color: $show_background;
+            display: none;
+            flex-direction: column;
+            height: 100%;
+            left: 0;
+            position: absolute;
+            top: 0;
+            width: 100%;
+        }
+
+        &__description {
+            color: $neutral000;
+            font-size: .85rem;
+            height: 50%;
+            letter-spacing: .1rem;
+            line-height: 4;
+            text-align: center;
+        }
+
+        &__action {
+            align-self: center;
+            background: $background-action;
+            border: 2px solid darken($background-action, 30%);
+            color: $neutral000;
+            flex-grow: 3;
+            font-size: 1.2rem;
+            height: 2rem;
+            margin: 5%;
+            text-transform: uppercase;
+            width: 90%;
+        }
+    }
+    @content;
 }

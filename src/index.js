@@ -1,6 +1,8 @@
 import React, { Component } from 'react';
 import ExampleList from './dynamic_templates/modules/list/list';
 
+import './main.scss';
+
 export default class Example extends Component {
 
     render() {

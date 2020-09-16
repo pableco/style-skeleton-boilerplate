@@ -50,7 +50,7 @@ exports[`component snapshoot render with all props 1`] = `
       </button>
     </div>
     <span
-      className="list-item__span"
+      className="list-item__extra"
     />
   </figure>
 </li>
@@ -106,7 +106,7 @@ exports[`component snapshoot render without props 1`] = `
       </button>
     </div>
     <span
-      className="list-item__span"
+      className="list-item__extra"
     />
   </figure>
 </li>
