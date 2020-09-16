@@ -12,20 +12,20 @@ export default class ExampleList extends Component {
         } = this.props;
         const imgBgStyles = { backgroundImage: `url(${imgBg})` };
         return (
-            <li className="list-item js--hover">
-                <figure className="list-figure">
-                    <figcaption className="list-figcaption">
-                        <h3 className="list-item__title">{title}</h3>
-                        <h4 className="list-item__sub-title">{subTitle}</h4>
+            <li className="listItem js--hover">
+                <figure className="listItem__figure">
+                    <figcaption className="listItem__figcaption">
+                        <h3 className="listItem__title">{title}</h3>
+                        <h4 className="listItem__subTitle">{subTitle}</h4>
                     </figcaption>
-                    <div className="list-item__img-fix" style={imgBgStyles}></div>
-                    <img className="list-item__img" src={imgBg} alt={`${title} image`} />
+                    <div className="listItem__imgFix" style={imgBgStyles}></div>
+                    <img className="listItem__img" src={imgBg} alt={`${title} image`} />
 
-                    <div className="list-item__content">
-                        <p className="list-item__description">{description}</p>
-                        <button className="list-item__action">{cta}</button>
+                    <div className="listItem__content">
+                        <p className="listItem__description">{description}</p>
+                        <button className="listItem__action">{cta}</button>
                     </div>
-                    <span className="list-item__span"></span>
+                    <span className="listItem__extra"></span>
                 </figure>
             </li>
         );

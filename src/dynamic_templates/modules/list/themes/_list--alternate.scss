@@ -2,7 +2,7 @@
 @mixin list__alternate (
     $img--width: 100%,
     $img--height: 7rem,
-    $button-text: $light-backup,
+    $button-text: $neutral010,
     $button-color: $corporate-color,
     $img-round: $roundfactor
 ) {
@@ -13,54 +13,54 @@
         justify-content: space-around;
         list-style: none;
         text-align: center;
-
-        &-item {
-            align-self: center;
-
-            &__title {
-                align-self: center;
-            }
-
-            &__sub-title {
-                color: $button-text;
-                font-size: .7rem;
-                position: relative;
-                text-shadow: 3px 3px 3px $almost-dark-color;
-                top: 4.5rem;
-            }
-
-            &__img {
-                display: none;
-
-                &-fix {
-                    @extend %background-cover;
-
-                    border: 0;
-                    border-radius: $img-round;
-                    height: $img--height;
-                    width: $img--width;
-                }
-            }
-
-            &__description {
-                align-self: center;
-            }
-
-            &__action {
-                align-self: center;
-                background: $button-color;
-                border: 0;
-                color: $button-text;
-                font-size: 1.2rem;
-                height: 3rem;
-                text-transform: lowercase;
-                width: 100%;
-            }
-
-            &__span {
-                display: none;
-            }
-        }
-        @content;
     }
+
+    %listItem {
+        align-self: center;
+
+        &__title {
+            align-self: center;
+        }
+
+        &__subTitle {
+            color: $button-text;
+            font-size: .7rem;
+            position: relative;
+            text-shadow: 3px 3px 3px $neutral600;
+            top: 4.5rem;
+        }
+
+        &__img {
+            display: none;
+        }
+
+        &__imgFix {
+            @extend %background-cover;
+
+            border: 0;
+            border-radius: $img-round;
+            height: $img--height;
+            width: $img--width;
+        }
+
+        &__description {
+            align-self: center;
+        }
+
+        &__action {
+            align-self: center;
+            background: $button-color;
+            border: 0;
+            color: $button-text;
+            font-size: 1.2rem;
+            height: 3rem;
+            text-transform: lowercase;
+            width: 100%;
+        }
+
+        &__extra {
+            display: none;
+        }
+    }
+    @content;
 }

@@ -5,26 +5,24 @@
     $img--width: 10rem,
     $img--height: 10rem
 ) {
-    %list {
-        &-item {
-            border: $border;
-            padding: 2rem 0;
+    %listItem {
+        border: $border;
+        padding: 2rem 0;
 
-            &__img {
-                display: none;
-            }
-
-            &__img-fix {
-                @extend %background-cover;
-
-                height: $img--height;
-                width: $img--width;
-            }
-
-            &__title {
-                color: $title-color;
-            }
+        &__img {
+            display: none;
         }
-        @content;
+
+        &__imgFix {
+            @extend %background-cover;
+
+            height: $img--height;
+            width: $img--width;
+        }
+
+        &__title {
+            color: $title-color;
+        }
     }
+    @content;
 }

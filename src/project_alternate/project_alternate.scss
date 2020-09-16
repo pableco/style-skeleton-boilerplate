@@ -5,14 +5,12 @@
 @include list__alternate(
     $img-round: 20rem
 ) {
-
-    %list-item__title {
+    %listItem__title {
         text-decoration: underline;
     }
 
-    &.list--offers {
-
-        %list-item__title {
+    .list--offers {
+        %listItem__title {
             color: $main-color;
 
             &::after,
@@ -22,9 +20,8 @@
         }
     }
 
-    &.list--news {
-
-        %list-item {
+    .list--news {
+        %listItem {
             background: $custom-color;
 
             &__title {
@@ -32,10 +29,8 @@
                 text-transform: uppercase;
             }
 
-            &__img {
-                &-fix {
-                    border-radius: 0;
-                }
+            &__imgFix {
+                border-radius: 0;
             }
         }
     }

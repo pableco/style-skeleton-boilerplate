@@ -11,27 +11,23 @@ $screen_lg: 1024px !default;
 // Extra large screen / wide desktop
 $screen_xl: 1200px !default;
 
-$max-width: 1600px !default;
-$min-width: 150px !default;
-$padding-base: 30px !default;
-
 $tablet: lg !default;
 $tabletv: md !default;
 
 // Colors ---------------------------------------------------------
 
-$light-color: #fff !default;
-$light-backup: darken($light-color, 2.6%) !default;
-$practically-light-color: darken($light-color, 10%) !default;
-$almost-light-color: darken($light-color, 20%) !default;
-$nearly-light-color: darken($light-color, 30%) !default;
-$mid-light-color: darken($light-color, 40%) !default;
-$mid-color: darken($light-color, 50%) !default;
-$mid-dark-color: darken($light-color, 60%) !default;
-$nearly-dark-color: darken($light-color, 70%) !default;
-$almost-dark-color: darken($light-color, 80%) !default;
-$practically-dark-color: darken($light-color, 90%) !default;
-$dark-color: darken($light-color, 100%) !default;
+$neutral000: #fff !default;
+$neutral010: darken($neutral000, 2.6%) !default;
+$neutral100: darken($neutral000, 10%) !default;
+$neutral200: darken($neutral000, 20%) !default;
+$neutral300: darken($neutral000, 30%) !default;
+$neutral400: darken($neutral000, 40%) !default;
+$neutral500: darken($neutral000, 50%) !default;
+$neutral600: darken($neutral000, 60%) !default;
+$neutral700: darken($neutral000, 70%) !default;
+$neutral800: darken($neutral000, 80%) !default;
+$neutral900: darken($neutral000, 90%) !default;
+$neutral999: darken($neutral000, 100%) !default;
 
 $main-color: #ffa300 !default;
 $custom-color: #84b044 !default;

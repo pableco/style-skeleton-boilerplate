@@ -3,8 +3,14 @@
         "stylelint-config-standard",
         "stylelint-config-recommended-scss"
     ],
+    "plugins": [
+        "stylelint-selector-bem-pattern"
+    ],
     "rules": {
         "number-leading-zero": "never",
-        "indentation": 4
+        "indentation": 4,
+        "plugin/selector-bem-pattern": {
+            "preset": "bem"
+        }
     }
 }
