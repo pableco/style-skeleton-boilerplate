@@ -4,11 +4,11 @@
 /* eslint-disable max-statements */
 
 import React from 'react';
-import { shallow } from 'enzyme';
+import { shallow, mount } from 'enzyme';
 import renderer from 'react-test-renderer';
 
 import Test from '../src';
-import ExampleList from '../src/dynamic_templates/modules/list/list';
+import ListItem from '../src/dynamic_templates/modules/list';
 
 const props = {
     classname: '--news',
@@ -18,7 +18,7 @@ describe('component snapshoot', () => {
 
     it('render without props', () => {
         const wrapper = renderer.create(
-            <ExampleList />,
+            <Test />,
         ).toJSON();
 
         expect(wrapper).toMatchSnapshot();
@@ -26,19 +26,19 @@ describe('component snapshoot', () => {
 
     it('render with all props', () => {
         const wrapper = renderer.create(
-            <ExampleList {...props}/>,
+            <Test {...props}/>,
         ).toJSON();
 
         expect(wrapper).toMatchSnapshot();
     });
 });
 
-describe('ExampleList', () => {
+describe('ListItem', () => {
 
     it('example', () => {
-        const wrapper = shallow(<ExampleList />);
+        const wrapper = mount(<ListItem />);
 
-        expect(wrapper.type()).toBe('li');
+        expect(wrapper.find('li')).toHaveLength(1);
     });
 
 });
@@ -60,9 +60,9 @@ describe('List test', () => {
     });
 
     it('check length of the list', () => {
-        const wrapper = shallow(<Test />);
+        const wrapper = shallow(<Test {...data} />);
 
-        expect(wrapper.find('ExampleList')).toHaveLength(5);
+        expect(wrapper.find('ListItem')).toHaveLength(5);
     });
 
 });

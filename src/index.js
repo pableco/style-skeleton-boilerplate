@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import ExampleList from './dynamic_templates/modules/list/list';
+import ListItem from './dynamic_templates/modules/list';
 
 import './main.scss';
 
@@ -11,7 +11,7 @@ export default class Example extends Component {
             items,
         } = this.props;
         const classNameList = `list list${classname}`;
-        const itemsList = items.map((item) => <ExampleList key={item}/>);
+        const itemsList = items.map((item) => <ListItem key={item}/>);
 
         return (
             <ul className={classNameList}>

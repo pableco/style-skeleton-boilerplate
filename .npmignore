@@ -7,7 +7,6 @@ webpack.common.js
 webpack.deploy.js
 webpack.prod.js
 postcss.config.js
-.babelrc
 .eslintignore
 .eslintrc
 .npmignore
@@ -16,6 +15,4 @@ postcss.config.js
 .sonar
 .idea
 .vscode
-sonar-scanner-2.6.1
-sonar-scanner-2.6.1.zip
 styleLintReport.txt
