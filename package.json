@@ -13,7 +13,7 @@
     "clean": "rm -rf dist && mkdir dist",
     "predist": "npm run clean",
     "check-master": "git symbolic-ref --short HEAD | grep ^master$ > /dev/null || (echo \"Not in 'master' branch. Aborting release\"; return 1)",
-    "changelog": "npm run prerelease && changelog -p && git add CHANGELOG.md && git commit -m 'updated CHANGELOG.md",
+    "changelog": "npm run prerelease && changelog -p && git add CHANGELOG.md && git commit -m 'updated CHANGELOG.md'",
     "release:patch": "npm run changelog && npm version patch",
     "release:minor": "npm run changelog && npm version minor",
     "release:major": "npm run changelog && npm version major",
