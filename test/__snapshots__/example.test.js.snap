@@ -1,113 +1,545 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`component snapshoot render with all props 1`] = `
-<li
-  className="listItem js--hover"
+<ul
+  className="list list--news"
 >
-  <figure
-    className="listItem__figure"
+  <li
+    className="listItem"
   >
-    <figcaption
-      className="listItem__figcaption"
+    <figure
+      className="listItem__figure"
     >
-      <h3
-        className="listItem__title"
+      <figcaption
+        className="listItem__figcaption"
       >
-        Test title
-      </h3>
-      <h4
-        className="listItem__subTitle"
-      >
-        Subtitle test
-      </h4>
-    </figcaption>
-    <div
-      className="listItem__imgFix"
-      style={
-        Object {
-          "backgroundImage": "url(https://source.unsplash.com/random)",
+        <h3
+          className="listItem__title"
+        >
+          Test title
+        </h3>
+        <h4
+          className="listItem__subTitle"
+        >
+          Subtitle test
+        </h4>
+      </figcaption>
+      <div
+        className="listItem__imgFix"
+        style={
+          Object {
+            "backgroundImage": "url(https://source.unsplash.com/random)",
+          }
         }
-      }
-    />
-    <img
-      alt="Test title image"
-      className="listItem__img"
-      src="https://source.unsplash.com/random"
-    />
-    <div
-      className="listItem__content"
-    >
-      <p
-        className="listItem__description"
+      />
+      <img
+        alt="Test title image"
+        className="listItem__img"
+        src="https://source.unsplash.com/random"
+      />
+      <div
+        className="listItem__content"
       >
-        Aenean vitae neque ultricies, egestas eros non, bibendum purus.
+        <p
+          className="listItem__description"
+        >
+          Aenean vitae neque ultricies, egestas eros non, bibendum purus.
     Suspendisse sodales quam non lectus imperdiet dignissim.
-      </p>
-      <button
-        className="listItem__action"
+        </p>
+        <button
+          className="listItem__action"
+        >
+          Call now
+        </button>
+      </div>
+      <span
+        className="listItem__extra"
+      />
+    </figure>
+  </li>
+  <li
+    className="listItem"
+  >
+    <figure
+      className="listItem__figure"
+    >
+      <figcaption
+        className="listItem__figcaption"
       >
-        Call now
-      </button>
-    </div>
-    <span
-      className="listItem__extra"
-    />
-  </figure>
-</li>
+        <h3
+          className="listItem__title"
+        >
+          Test title
+        </h3>
+        <h4
+          className="listItem__subTitle"
+        >
+          Subtitle test
+        </h4>
+      </figcaption>
+      <div
+        className="listItem__imgFix"
+        style={
+          Object {
+            "backgroundImage": "url(https://source.unsplash.com/random)",
+          }
+        }
+      />
+      <img
+        alt="Test title image"
+        className="listItem__img"
+        src="https://source.unsplash.com/random"
+      />
+      <div
+        className="listItem__content"
+      >
+        <p
+          className="listItem__description"
+        >
+          Aenean vitae neque ultricies, egestas eros non, bibendum purus.
+    Suspendisse sodales quam non lectus imperdiet dignissim.
+        </p>
+        <button
+          className="listItem__action"
+        >
+          Call now
+        </button>
+      </div>
+      <span
+        className="listItem__extra"
+      />
+    </figure>
+  </li>
+  <li
+    className="listItem"
+  >
+    <figure
+      className="listItem__figure"
+    >
+      <figcaption
+        className="listItem__figcaption"
+      >
+        <h3
+          className="listItem__title"
+        >
+          Test title
+        </h3>
+        <h4
+          className="listItem__subTitle"
+        >
+          Subtitle test
+        </h4>
+      </figcaption>
+      <div
+        className="listItem__imgFix"
+        style={
+          Object {
+            "backgroundImage": "url(https://source.unsplash.com/random)",
+          }
+        }
+      />
+      <img
+        alt="Test title image"
+        className="listItem__img"
+        src="https://source.unsplash.com/random"
+      />
+      <div
+        className="listItem__content"
+      >
+        <p
+          className="listItem__description"
+        >
+          Aenean vitae neque ultricies, egestas eros non, bibendum purus.
+    Suspendisse sodales quam non lectus imperdiet dignissim.
+        </p>
+        <button
+          className="listItem__action"
+        >
+          Call now
+        </button>
+      </div>
+      <span
+        className="listItem__extra"
+      />
+    </figure>
+  </li>
+  <li
+    className="listItem"
+  >
+    <figure
+      className="listItem__figure"
+    >
+      <figcaption
+        className="listItem__figcaption"
+      >
+        <h3
+          className="listItem__title"
+        >
+          Test title
+        </h3>
+        <h4
+          className="listItem__subTitle"
+        >
+          Subtitle test
+        </h4>
+      </figcaption>
+      <div
+        className="listItem__imgFix"
+        style={
+          Object {
+            "backgroundImage": "url(https://source.unsplash.com/random)",
+          }
+        }
+      />
+      <img
+        alt="Test title image"
+        className="listItem__img"
+        src="https://source.unsplash.com/random"
+      />
+      <div
+        className="listItem__content"
+      >
+        <p
+          className="listItem__description"
+        >
+          Aenean vitae neque ultricies, egestas eros non, bibendum purus.
+    Suspendisse sodales quam non lectus imperdiet dignissim.
+        </p>
+        <button
+          className="listItem__action"
+        >
+          Call now
+        </button>
+      </div>
+      <span
+        className="listItem__extra"
+      />
+    </figure>
+  </li>
+  <li
+    className="listItem"
+  >
+    <figure
+      className="listItem__figure"
+    >
+      <figcaption
+        className="listItem__figcaption"
+      >
+        <h3
+          className="listItem__title"
+        >
+          Test title
+        </h3>
+        <h4
+          className="listItem__subTitle"
+        >
+          Subtitle test
+        </h4>
+      </figcaption>
+      <div
+        className="listItem__imgFix"
+        style={
+          Object {
+            "backgroundImage": "url(https://source.unsplash.com/random)",
+          }
+        }
+      />
+      <img
+        alt="Test title image"
+        className="listItem__img"
+        src="https://source.unsplash.com/random"
+      />
+      <div
+        className="listItem__content"
+      >
+        <p
+          className="listItem__description"
+        >
+          Aenean vitae neque ultricies, egestas eros non, bibendum purus.
+    Suspendisse sodales quam non lectus imperdiet dignissim.
+        </p>
+        <button
+          className="listItem__action"
+        >
+          Call now
+        </button>
+      </div>
+      <span
+        className="listItem__extra"
+      />
+    </figure>
+  </li>
+</ul>
 `;
 
 exports[`component snapshoot render without props 1`] = `
-<li
-  className="listItem js--hover"
+<ul
+  className="list listundefined"
 >
-  <figure
-    className="listItem__figure"
+  <li
+    className="listItem"
   >
-    <figcaption
-      className="listItem__figcaption"
+    <figure
+      className="listItem__figure"
     >
-      <h3
-        className="listItem__title"
+      <figcaption
+        className="listItem__figcaption"
       >
-        Test title
-      </h3>
-      <h4
-        className="listItem__subTitle"
-      >
-        Subtitle test
-      </h4>
-    </figcaption>
-    <div
-      className="listItem__imgFix"
-      style={
-        Object {
-          "backgroundImage": "url(https://source.unsplash.com/random)",
+        <h3
+          className="listItem__title"
+        >
+          Test title
+        </h3>
+        <h4
+          className="listItem__subTitle"
+        >
+          Subtitle test
+        </h4>
+      </figcaption>
+      <div
+        className="listItem__imgFix"
+        style={
+          Object {
+            "backgroundImage": "url(https://source.unsplash.com/random)",
+          }
         }
-      }
-    />
-    <img
-      alt="Test title image"
-      className="listItem__img"
-      src="https://source.unsplash.com/random"
-    />
-    <div
-      className="listItem__content"
-    >
-      <p
-        className="listItem__description"
+      />
+      <img
+        alt="Test title image"
+        className="listItem__img"
+        src="https://source.unsplash.com/random"
+      />
+      <div
+        className="listItem__content"
       >
-        Aenean vitae neque ultricies, egestas eros non, bibendum purus.
+        <p
+          className="listItem__description"
+        >
+          Aenean vitae neque ultricies, egestas eros non, bibendum purus.
     Suspendisse sodales quam non lectus imperdiet dignissim.
-      </p>
-      <button
-        className="listItem__action"
+        </p>
+        <button
+          className="listItem__action"
+        >
+          Call now
+        </button>
+      </div>
+      <span
+        className="listItem__extra"
+      />
+    </figure>
+  </li>
+  <li
+    className="listItem"
+  >
+    <figure
+      className="listItem__figure"
+    >
+      <figcaption
+        className="listItem__figcaption"
       >
-        Call now
-      </button>
-    </div>
-    <span
-      className="listItem__extra"
-    />
-  </figure>
-</li>
+        <h3
+          className="listItem__title"
+        >
+          Test title
+        </h3>
+        <h4
+          className="listItem__subTitle"
+        >
+          Subtitle test
+        </h4>
+      </figcaption>
+      <div
+        className="listItem__imgFix"
+        style={
+          Object {
+            "backgroundImage": "url(https://source.unsplash.com/random)",
+          }
+        }
+      />
+      <img
+        alt="Test title image"
+        className="listItem__img"
+        src="https://source.unsplash.com/random"
+      />
+      <div
+        className="listItem__content"
+      >
+        <p
+          className="listItem__description"
+        >
+          Aenean vitae neque ultricies, egestas eros non, bibendum purus.
+    Suspendisse sodales quam non lectus imperdiet dignissim.
+        </p>
+        <button
+          className="listItem__action"
+        >
+          Call now
+        </button>
+      </div>
+      <span
+        className="listItem__extra"
+      />
+    </figure>
+  </li>
+  <li
+    className="listItem"
+  >
+    <figure
+      className="listItem__figure"
+    >
+      <figcaption
+        className="listItem__figcaption"
+      >
+        <h3
+          className="listItem__title"
+        >
+          Test title
+        </h3>
+        <h4
+          className="listItem__subTitle"
+        >
+          Subtitle test
+        </h4>
+      </figcaption>
+      <div
+        className="listItem__imgFix"
+        style={
+          Object {
+            "backgroundImage": "url(https://source.unsplash.com/random)",
+          }
+        }
+      />
+      <img
+        alt="Test title image"
+        className="listItem__img"
+        src="https://source.unsplash.com/random"
+      />
+      <div
+        className="listItem__content"
+      >
+        <p
+          className="listItem__description"
+        >
+          Aenean vitae neque ultricies, egestas eros non, bibendum purus.
+    Suspendisse sodales quam non lectus imperdiet dignissim.
+        </p>
+        <button
+          className="listItem__action"
+        >
+          Call now
+        </button>
+      </div>
+      <span
+        className="listItem__extra"
+      />
+    </figure>
+  </li>
+  <li
+    className="listItem"
+  >
+    <figure
+      className="listItem__figure"
+    >
+      <figcaption
+        className="listItem__figcaption"
+      >
+        <h3
+          className="listItem__title"
+        >
+          Test title
+        </h3>
+        <h4
+          className="listItem__subTitle"
+        >
+          Subtitle test
+        </h4>
+      </figcaption>
+      <div
+        className="listItem__imgFix"
+        style={
+          Object {
+            "backgroundImage": "url(https://source.unsplash.com/random)",
+          }
+        }
+      />
+      <img
+        alt="Test title image"
+        className="listItem__img"
+        src="https://source.unsplash.com/random"
+      />
+      <div
+        className="listItem__content"
+      >
+        <p
+          className="listItem__description"
+        >
+          Aenean vitae neque ultricies, egestas eros non, bibendum purus.
+    Suspendisse sodales quam non lectus imperdiet dignissim.
+        </p>
+        <button
+          className="listItem__action"
+        >
+          Call now
+        </button>
+      </div>
+      <span
+        className="listItem__extra"
+      />
+    </figure>
+  </li>
+  <li
+    className="listItem"
+  >
+    <figure
+      className="listItem__figure"
+    >
+      <figcaption
+        className="listItem__figcaption"
+      >
+        <h3
+          className="listItem__title"
+        >
+          Test title
+        </h3>
+        <h4
+          className="listItem__subTitle"
+        >
+          Subtitle test
+        </h4>
+      </figcaption>
+      <div
+        className="listItem__imgFix"
+        style={
+          Object {
+            "backgroundImage": "url(https://source.unsplash.com/random)",
+          }
+        }
+      />
+      <img
+        alt="Test title image"
+        className="listItem__img"
+        src="https://source.unsplash.com/random"
+      />
+      <div
+        className="listItem__content"
+      >
+        <p
+          className="listItem__description"
+        >
+          Aenean vitae neque ultricies, egestas eros non, bibendum purus.
+    Suspendisse sodales quam non lectus imperdiet dignissim.
+        </p>
+        <button
+          className="listItem__action"
+        >
+          Call now
+        </button>
+      </div>
+      <span
+        className="listItem__extra"
+      />
+    </figure>
+  </li>
+</ul>
 `;
