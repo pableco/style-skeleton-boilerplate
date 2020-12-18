@@ -19,7 +19,7 @@
     "release:major": "npm run changelog && npm version major",
     "prepare": "npm run dist",
     "postversion": "git push --follow-tags",
-    "deploy": "webpack --config webpack.deploy.js && surge ./deploy/builds/ [nombre componente eg:'style-skeleton-boilerplate'].surge.sh",
+    "deploy": "webpack --config webpack.deploy.js && surge ./deploy/builds/ style-skeleton-boilerplate.surge.sh",
     "lint": "eslint . && npm run style-lint",
     "lint:fix": "eslint . --fix",
     "style-lint": "npx stylelint 'src/**/*.scss' -o styleLintReport.txt",
