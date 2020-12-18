@@ -8,9 +8,10 @@ import Example from '../src/project_default/project_default';
 ReactDOM.render(
     <Fragment>
         <ul className="menu">
-            <li className="menu__item"><a href="/index.html">default</a></li>
-            <li className="menu__item"><a href="/alternate.html">alternate</a></li>
-            <li className="menu__item"><a href="/option.html">option</a></li>
+            <li className="menu__item">Try different versions:</li>
+            <li className="menu__item"><a href="/index.html">Default</a></li>
+            <li className="menu__item"><a href="/alternate.html">Alternate</a></li>
+            <li className="menu__item"><a href="/option.html">Option</a></li>
         </ul>
         <Example classname={'--news'}/>,
         <Example classname={'--offers'}/>
