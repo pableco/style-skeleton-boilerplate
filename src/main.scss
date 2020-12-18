@@ -1,11 +1,12 @@
 /* postcss-bem-linter: define menu */
 
 .menu {
-    text-align: center;
+    justify-content: center;
+    display: flex;
 
     &__item {
-        display: inline-block;
         padding: 1rem;
+        list-style: none;
     }
 }
 
