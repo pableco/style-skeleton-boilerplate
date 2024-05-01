@@ -86,7 +86,7 @@
     "stylelint-selector-bem-pattern": "^2.1.0",
     "surge": "^0.21.6",
     "webpack": "^4.44.1",
-    "webpack-bundle-analyzer": "^3.8.0",
+    "webpack-bundle-analyzer": "^4.10.2",
     "webpack-cli": "^3.3.12",
     "webpack-dashboard": "^3.2.1",
     "webpack-dev-server": "^3.11.0",
